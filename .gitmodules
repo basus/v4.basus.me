@@ -1,0 +1,3 @@
+[submodule "src/fonts"]
+	path = src/fonts
+	url = basus@basus.me:/git/basus/fonts.git
