@@ -1,0 +1,84 @@
+---
+title: Home
+layout: layouts/default.vto
+---
+<section id="bio" class="row">
+    <div id="picture">
+        <img id="profile" src="/images/front-page.jpg"
+             alt="Me standing in front of a tree in the Fall" />
+    </div>
+
+    <div id="about">
+
+        <p>
+            I'm an academic computer scientist, programmer, and writer. My main
+            interest is in programming languages as a medium for human thought,
+            expression and interaction with computer systems.
+        </p>
+
+        <p>
+            I am currently working on the legal applications and implications of
+            computational technologies. I’m exploring how software systems can
+            express and enforce legal restrictions and intent, and how those
+            restrictions affect software development and deployment. Previously,
+            I’ve applied techniques and tools from programming languages to
+            software-defined networks, and optical networks.
+        </p>
+
+        <p>
+            I have previously been a Visiting Assistant Professor in Computer
+            Science at Middlebury College, and a Postdoctoral Fellow at Harvard
+            University. I earned my PhD in Computer Science from Cornell
+            University.
+        </p>
+
+    </div>
+
+    <section id="entries">
+        <h2>Latest Journal Entries</h2>
+        <ul class="entry-list">
+            {{ for entry of search.pages("section=journal basename!=index", "date=desc",4) }}
+            <li class="entry">
+                <h3 class="entry-title">
+                    <a href="{{ entry.url }}">{{ entry.title }}</a>
+                </h3>
+                <time class="entry-date" datetime="{{ date |> date('yyyy-mm-dd')}}">{{ entry.date |> date('MMM do, yyyy')}}</time>
+                <p class="entry-desc">{{ entry.description }}</p>
+            </li>
+            {{ /for }}
+        </ul>
+    </section>
+
+    <section id="elsewhere">
+        <h2>Elsewhere&hellip;</h2>
+        <dl id="outgoing">
+            <dt><svg class="feather">
+                <title>Email</title>
+                <use href="/icons/feather-sprite.svg#mail"/>
+            </svg></dt>
+            <dd><a href="mailto:shr@basus.me">Email</a></dd>
+
+            <dt><svg class="feather">
+                <title>GitHub</title>
+                <use href="/icons/feather-sprite.svg#github"/>
+            </svg> </dt>
+            <dd> <a href="https://github.com/basus/">Github</a> </dd>
+
+
+            <dt><svg class="feather">
+                <title>Threads</title>
+                <use href="/icons/feather-sprite.svg#type"/>
+            </svg></dt>
+            <dd><a href="https://threads.net/@basus.me">Threads</a></dd>
+            <dt><svg class="feather">
+                <title>Mastodon</title>
+                <use href="/icons/feather-sprite.svg#activity"/>
+            </svg></dt>
+            <dd><a href="https://mastodon.social/@basus">Mastodon</a></dd>
+
+
+        </dl>
+
+    </section>
+
+</section>

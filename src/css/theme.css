@@ -220,14 +220,53 @@ header > h2 {
 .meta dt {display: inline;}
 .meta dd {display: inline; margin: 0; }
 
-/* Index page head */
-#avatar {
-    width: 80%;
+/* Front page */
+#picture { grid-column: span 4; }
+
+#profile {
+    width: 90%;
     display: block;
-    margin: 0 auto;
     border-radius: .5rem!important;
 }
 
+#about { grid-column: 5/-1; }
+#entries { grid-column: 5/span 5; }
+#elsewhere { grid-column: 11/span 2; }
+
+#outgoing {
+    margin: 0;
+    display: grid;
+    line-height: 1.1;
+    grid-template-columns: 2em 1fr;
+    text-decoration: none;
+    color: var(--accent);
+    font-weight: 600;
+    font-size: var(--larger-font-size);
+    font-family: var(--sans-serif-fonts);
+    text-transform: uppercase;
+}
+
+#outgoing dt {
+    margin: 1rem 1rem 1rem 0.5rem;
+    display: inline;
+}
+
+#outgoing dd {
+    margin: 1rem 0 1rem 1rem;
+    display: inline;
+}
+
+
+#outgoing dd a {
+    color: var(--accent);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: var(--larger-font-size);
+    font-family: var(--sans-serif-fonts);
+}
+
+#outgoing dd a:hover { color: var(--accent-alt); }
 /* Archive page */
 
 #latest {
@@ -383,6 +422,7 @@ a.post-date :hover { color: var(--accent-alt); }
     height: 1.1em;
     margin-right: 1rem;
 }
+
 /* Styling for feather icons */
 .feather {
     display: inline;
