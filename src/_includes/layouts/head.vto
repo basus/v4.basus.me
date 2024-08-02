@@ -6,7 +6,7 @@
   <!-- OpenGraph properties -->
   <meta property="og:site_name" content="Basus.me" />
   <meta property="og:title" content="{{ title }}" />
-  <meta property="og:url" content="{{ url }}" />
+  <meta property="og:url" content="{{  url |> url(true) }}" />
   <meta property="og:description" content="{{ description }}" />
 
   <link rel="stylesheet" href="/fonts/fonts.css">
@@ -15,4 +15,8 @@
   <link rel="stylesheet" href="/css/colors/minty.css">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Use Plausible Analytics -->
+  <script defer data-domain="basus.me" src="https://plausible.io/js/script.js"></script>
+
 </head>
