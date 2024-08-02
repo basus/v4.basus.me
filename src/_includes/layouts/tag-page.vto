@@ -1,0 +1,23 @@
+---
+layout: layouts/default.vto
+---
+<div class="row">
+
+    <section class="mainbar">
+        <h1>{{ title }}</h1>
+        <p class="meta">{{ entries.length }} entries</p>
+        <ul class="entry-list">
+
+            {{ for entry of entries }}
+            <li class="entry">
+                <h2 class="entry-title">
+                    <a href="{{ entry.url }}">{{ entry.title }}</a>
+                </h2>
+                <time class="entry-date" datetime="{{ date |> date('yyyy-mm-dd')}}">{{ entry.date |> date('MMM do, yyyy')}}</time>
+                <p class="entry-desc">{{ entry.description }}</p>
+            </li>
+            {{ /for }}
+
+        </ul>
+    </section>
+</div>

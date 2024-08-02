@@ -1,0 +1,26 @@
+---
+layout: layouts/default.vto
+---
+
+<article class="row">
+    {{ import { meta } from "./meta.vto" }}
+    {{ meta(page.data) }}
+
+    <div class="mainbar">
+
+        {{ if post_type === "video" }}
+           {{ import { video } from "./video.vto" }}
+           {{ video(uri, caption, content) }}
+        {{ else if post_type === "images" }}
+           {{ import i from "./images.vto" }}
+           {{ i.images(images, caption, content) }}
+        {{ else if post_type === "link" }}
+           {{ import { link } from "./link.vto" }}
+           {{ link(uri, title, url, content) }}
+        {{ else }}
+           {{ content }}
+        {{ /if }}
+
+    </div>
+
+</article>

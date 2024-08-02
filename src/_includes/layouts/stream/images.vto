@@ -1,0 +1,31 @@
+---
+layout: layouts/default.vto
+---
+
+{{ export function images(images, caption, content) }}
+<figure>
+
+    <div class="images">
+        {{ for image of images }}
+        <img src="{{ image.src }}" alt="{{ image.alt }}" />
+        {{ /for }}
+    </div>
+
+    <figcaption class="image-caption">
+        {{ caption }}
+    </figcaption>
+</figure>
+
+{{ content }}
+{{ /export }}
+
+
+<article class="row">
+    {{ import { meta } from "./meta.vto"}}
+    {{ meta(page.data) }}
+
+    <div class="mainbar">
+        {{ images(images, caption, content) }}
+    </div>
+
+</article>

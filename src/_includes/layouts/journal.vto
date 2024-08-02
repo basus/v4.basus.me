@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  {{ include "./head.vto" }}
+  <body>
+    {{ include "./header.vto" }}
+
+		<main>
+      <article class="row journal-entry">
+
+        <div class="wide-sidebar">
+          <dl class="meta">
+            {{ if started }}
+            <dt>
+              <svg class="feather">
+                <title>Started</title>
+                <use href="/icons/feather-sprite.svg#sun"/>
+              </svg>
+            </dt>
+            <dd>{{ started |> date('MMM do, yyyy') }}</dd>
+            {{ /if }}
+
+            {{ if published }}
+            <dt>
+              <svg class="feather">
+                <title>Published</title>
+                <use href="/icons/feather-sprite.svg#calendar"/>
+              </svg>
+            </dt>
+            <dd>{{ published |> date('MMM do, yyyy') }}</dd>
+            {{ /if }}
+
+            {{ if modified }}
+            <dt>
+              <svg class="feather">
+                <title>Modified</title>
+                <use href="/icons/feather-sprite.svg#edit"/>
+              </svg>
+            </dt>
+            <dd>{{ published |> date('MMM do, yyyy') }}</dd>
+            {{ /if }}
+
+            {{ set ts = tags.filter(t => t !== "journal")}}
+            {{ if ts && ts.length > 0 }}
+            <dt>
+              <svg class="feather">
+                <use href="/icons/feather-sprite.svg#tag"/>
+              </svg>
+            </dt>
+
+            <dd>
+              {{ for idx, tag of ts }}
+              {{-idx == 0 ? '' : ','}}
+              {{tag-}}
+              {{ /for }}
+            </dd>
+            {{ /if }}
+
+          </dl>
+        </div>
+
+        <div class="mainbar">
+          <h1 class="entry-heading">{{ title }}</h1>
+          {{ content }}
+        </div>
+      </article>
+    </main>
+
+		{{ include "./footer.vto" }}
+  </body>
+
+</html>

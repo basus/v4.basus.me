@@ -1,0 +1,16 @@
+<header>
+  <h1> <a href="/">Shrutarshi Basu</a>&nbsp; </h1>
+  {{if section }}<h2> / {{ section }} </h2>{{/if}}
+
+  <nav>
+    <ul id="menu">
+      {{ for s of sections }}
+      <li class="menu-item {{if s == section }} menu-active{{/if}}" >
+        <a href="/{{ s }}" title="{{ title }}">{{ s }}</a>
+      </li>
+      {{ /for }}
+    </ul>
+  </nav>
+
+</header>
+
