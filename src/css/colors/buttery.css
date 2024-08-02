@@ -1,0 +1,17 @@
+/*
+
+These colors are based on the design of matthewbutterick.com circa 2024.
+
+The usage pattern derived from Rob Weychert:
+https://v6.robweychert.com/blog/2018/02/v6-color/
+*/
+
+:root {
+    --text: #444;            /* Dark color, body text */
+    --text-hdr: #2b2b2b;     /* Darker color, headers */
+    --text-alt: #ffffff;     /* Lightest color, usually white */
+    --bg: #fafafa;           /* 2nd lightest, distinguishable from white */
+    --bg-alt: #737373;       /* Darker than bg, borders & non-text UI */
+    --accent: #993e77;       /* 2nd brightest, metadata */
+    --accent-alt: #ec139c;   /* Most distinct, links */
+}

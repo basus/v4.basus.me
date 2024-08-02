@@ -1,0 +1,443 @@
+:root {
+
+    /* Fonts */
+    --mono-fonts: : "Fira Code", monospace;
+    --serif-fonts:  "Source Serif", Georgia, serif;
+    --sans-serif-fonts:  "Source Sans", Helvetica Neue, Helvetica, Arial;
+    --para-font-size: 1.85rem;
+    --smaller-font-size: 1.6rem;
+    --larger-font-size: 2.1rem;
+
+    /* Sizes */
+    --main-width: 70%;
+}
+
+* { box-sizing: border-box; }
+
+
+/*** Major Page Elements ***/
+/* Use margins and width uniformly to set widths of things */
+html {
+    /* Set this font size so that future sizes in rem will be 1/10th the size in pixels */
+    font-size: 62.5%;
+    line-height: 1.5;
+    tab-size: 4;
+}
+
+body {
+    margin: 0;
+    position: relative;
+    height: 100vh;
+    background-color: var(--bg);
+}
+
+header, main {
+    width: var(--main-width);
+    margin: 1em auto;
+}
+
+p, ul {
+    color: var(--text);
+    font-family: var(--serif-fonts);
+    font-size: var(--para-font-size);
+    margin: 0 0 1.75rem 0 ; }
+
+a {
+    color: var(--text);
+    text-decoration: underline;
+    text-decoration-color: var(--accent-alt);
+    text-decoration-thickness: 0.1em;
+}
+
+a:hover { color: var(--accent-alt); }
+
+article { margin-top: 2rem; }
+
+blockquote {
+    margin: 1em 0;
+    padding: 0 1.5em;
+    color: var(--text);
+    font-family: var(--serif-fonts);
+    font-size: var(--para-font-size);
+    font-style: italic;
+    font-weight: 400;
+}
+
+figure { margin: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--sans-serif-fonts);
+    color: var(--text-hdr);
+    font-size: inherit;
+    margin: 0 0 .25rem 0;
+}
+
+h1 {
+    font-size: 2.75rem;
+    text-transform: uppercase;
+}
+
+h1 a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h2 {
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 2.25rem;
+    font-weight: normal;
+}
+
+hr {
+  width: 20rem;
+  margin: 1em auto;
+  border: none;
+  border-top: 1px solid var(--bg-alt);
+  display: block;
+}
+
+hr.full {
+    width: 100%;
+    border-color: rgba(0,0,0,0.15);
+}
+
+footer {
+    font-family: var(--sans-serif-fonts);
+    text-align: left;
+    text-transform: uppercase;
+    border-top: 2px solid var(--text);
+    padding: 2em;
+    margin-top: auto;
+}
+
+footer p {
+    max-width: 80%;
+    font-size: 1.25rem;
+    margin-left: auto;
+}
+
+code, pre {
+    font-family: "Fira Code", monospace;
+}
+
+pre { padding: 1em; }
+
+/* Header styling */
+header > h1 {
+    display: inline-block;
+    margin: 0.25rem 0 0 0.25rem;
+    font-family: var(--sans-serif-fonts);
+}
+
+header > h2 {
+    color: var(--text);
+    margin: 0.5rem 0 0 0;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+/* Navigation bar styling */
+#menu {
+    display: flex;
+    clear: both;
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+    padding: 0px 0;
+    border-bottom: 2px solid var(--text);
+}
+
+.menu-item {
+    display: inline-flex;
+    border-width: 0px 2px 0px 0px;
+    border-style: solid;
+    border-image: linear-gradient(to bottom,  rgba(255,255,255,0),
+                                  var(--text)) 1 100%;
+}
+
+.menu-item a {
+    display: inline-block;
+    padding: 0.75em 0.75em;
+    text-align: left;
+    font-size: 1.5rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: var(--sans-serif-fonts);
+    letter-spacing: 1px;
+}
+
+.menu-active {
+    color: var(--text);
+    font-weight: bold;
+    background: linear-gradient(0deg, var(--text-alt), var(--bg));
+}
+
+/*** Utility classes for easy grid layouts ***/
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 1rem 1rem;
+}
+
+.row>h2 {
+    margin: 0;
+    grid-column: 1/-1; }
+
+.sidebar { grid-column: span 2; }
+.wide-sidebar { grid-column: span 3; }
+.mainbar { grid-column: 4/span 8; }
+.wide-mainbar { grid-column: 4/span 9; }
+.middlebar { grid-column: 3/-3; }
+.wide-middlebar { grid-column: 2/-2; }
+
+.clear {
+    width: 100%;
+    clear: both;
+}
+
+/** Meta elements **/
+.meta {
+    margin: 0;
+    max-width: 85%;
+    line-height: 1.1;
+    color: var(--accent);
+    text-decoration: none;
+    font-size: var(--para-font-size);
+    font-family: var(--sans-serif-fonts);
+
+    /* This is to keep the icons (first column) properly aligned with the text (the
+       second column). Use with the dt and add elements below. */
+    display: grid;
+    grid-template-columns: 1.5em 1fr;
+}
+
+.meta dt {display: inline;}
+.meta dd {display: inline; margin: 0; }
+
+/* Index page head */
+#avatar {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+    border-radius: .5rem!important;
+}
+
+/* Archive page */
+
+#latest {
+    grid-column: 2/span 5;
+}
+
+.entry-list {
+    padding: 0;
+    margin: 0 0 1rem 0 ;
+    list-style: none;
+}
+
+.entry {
+    padding: 1rem 0 2rem 0 ;
+    border-bottom: 2px solid var(--bg-alt);
+}
+
+.entry-title, .entry-title a {
+    margin: 0;
+    font-weight: 600;
+    display: inline-block;
+    text-decoration: none;
+    color: var(--text-hdr);
+}
+
+.entry-date {
+    display: block;
+    line-height: 1;
+    color: var(--accent);
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: var(--smaller-font-size);
+    font-family: var(--sans-serif-fonts);
+}
+
+.entry-desc {
+    font-style: italic;
+    margin: 0.25rem 0 0 0;
+}
+
+.entry-heading {
+    line-height: 1;             /* keeps the heading at the same level as meta */
+    margin-bottom: 1rem;
+}
+
+#by-tag { grid-column: 8/-2; }
+
+#tag-list {
+    padding: 0;
+    display: grid;
+    column-gap: 10%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(min-content, max-content);
+    list-style: none;
+}
+
+#tag-list li {
+    padding: 0.5rem 0;
+    border-bottom: 1.5px solid var(--bg-alt);
+}
+
+#tag-list a {
+    text-decoration: none;
+    color: var(--accent);
+    font-weight: 600;
+    font-family: var(--sans-serif-fonts);
+    text-transform: uppercase;
+}
+
+.tag {
+    margin: 0;
+    position: relative;
+}
+
+.tag-count {
+    display: inline;
+    right: 0;
+    position: absolute;
+    text-align: right;
+    color: var(--accent);
+    font-family: var(--sans-serif-fonts);
+}
+
+/** Stream index page(s) **/
+
+.post-list {
+    padding: 0;
+    margin: 0 0 1rem 0 ;
+    list-style: none;
+}
+
+.post {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 2px solid var(--bg-alt);
+}
+
+.post-date {
+    display: block;
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: var(--larger-font-size);
+    font-family: var(--sans-serif-fonts);
+}
+
+a.post-date :hover { color: var(--accent-alt); }
+
+.post-time {
+    clear: both;
+    line-height: 1;
+    color: var(--accent);
+    font-family: var(--sans-serif-fonts);
+}
+
+/** Embedded videos */
+.embedded-video {
+    width: 100%;
+    border: 0px;
+    aspect-ratio: 16 / 9;
+}
+
+/** Image posts in the stream **/
+.images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
+    gap: 1rem 5%;
+    margin-bottom: .5rem;
+}
+
+.images img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.image-caption, .image-caption a, .image-caption a:visited {
+    color: var(--text);
+    text-align: center;
+    font-weight: 600;
+    font-family: var(--sans-serif-fonts);
+    font-size: var(--larger-font-size);
+}
+
+/** Link posts **/
+
+.shared-link {
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.permalink {
+    height: 1.1em;
+    margin-right: 1rem;
+}
+/* Styling for feather icons */
+.feather {
+    display: inline;
+    height: 1em;
+    width: 1em;
+    stroke: var(--accent);
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+    margin-bottom: 0;
+}
+
+/* Styling for smaller screens */
+@media (max-width: 500px) {
+    #headshot {
+        left: 0;
+        float:none;
+        display: block;
+        position: relative;
+        margin: 0 auto 1em auto;
+    }
+
+    div#content {
+        margin: 1.5rem;
+        padding: 0;
+    }
+
+    div#info {
+        float: inherit;
+        position: inherit;
+        width: 100%;
+        text-align: left;
+    }
+
+    nav { width: 100%; }
+
+    .menu-item { flex: 1 1 0; }
+
+    .menu-item a { margin: 0 auto; }
+
+    footer p {
+        max-width: 100%;
+        text-align: left;
+    }
+
+    .entry-meta {
+        left: 0;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+    }
+
+    .entry-date { flex-grow: 1; }
+    .entry-tags { flex-grow: 0; }
+
+}

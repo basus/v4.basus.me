@@ -1,0 +1,9 @@
+:root {
+    --text: #6b4d47;       /* Dark color for body text */
+    --text-hdr: #4d3733;   /* Darker color for headers */
+    --text-alt: #ffffff;   /* Lightest color */
+    --bg: #eaeff1;         /* 2nd lightest */
+    --bg-alt: #c5d3d8;     /* darker bg (borders & UI) */
+    --accent: #6f939f;     /* Most distinct (links) */
+    --accent-alt: #ff6666;       /* Contrast with bg & text (metadata) */
+}

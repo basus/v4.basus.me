@@ -1,0 +1,15 @@
+/*
+
+These colors and the usage pattern derived from Rob Weychert
+https://v6.robweychert.com/blog/2018/02/v6-color/
+*/
+
+:root {
+    --text: #614e65;         /* Dark color, body text */
+    --text-hdr: #453748;     /* Darker color, headers */
+    --text-alt: #ffffff;     /* Lightest color, usually white */
+    --bg: #eeefe7;           /* 2nd lightest, distinguishable from white */
+    --bg-alt: #d0d4a5;       /* Darker than bg, borders & non-text UI */
+    --accent: #919749;       /* 2nd brightest, metadata */
+    --accent-alt: #ff668c;   /* Most distinct, links */
+}
