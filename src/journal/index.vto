@@ -1,0 +1,54 @@
+---
+title: Journal
+layout: layouts/default.vto
+---
+
+<div id="archive" class="row">
+
+  <section id="intro" class="middlebar">
+    <h1>Journal Archive</h1>
+    <p>
+
+      Welcome to the Journal Archive. This is a collects most of my
+      medium-length writing from various online platforms from about 2007
+      onwards (with breaks of various lengths in between). The topics I've
+      written about include technology, design, culture in various forms amongst
+      others. For now, you can <a href="#by-tag">browse by tag</a>, or see the
+      <a href="#latest">latest posts</a>. I will be adding a more complete
+      archive soon.
+    </p>
+    <p>
+      If instead you're looking for my shorter posts, quotes, links I've found
+      interesting, or media I've enjoyed, please take a look at the
+      <a href="/stream">stream</a>.
+    </p>
+  </section>
+
+  <section id="latest">
+    <h2>Latest Entries</h2>
+    <ul class="entry-list">
+      {{ for entry of search.pages("section=journal basename!=index", "date=desc",4) }}
+      <li class="entry">
+        <h3 class="entry-title">
+          <a href="{{ entry.url }}">{{ entry.title }}</a>
+        </h3>
+        <time class="entry-date" datetime="{{ date |> date('yyyy-mm-dd')}}">{{ entry.date |> date('MMM do, yyyy')}}</time>
+        <p class="entry-desc">{{ entry.description }}</p>
+      </li>
+      {{ /for }}
+    </ul>
+
+  </section>
+
+  <section id="by-tag">
+    <h2>Browse by Tag</h2>
+    <ul id="tag-list">
+      {{ for tag of search.values("tags").sort() }}
+      <li class="tag">
+        <a href="tags/{{ tag |> slugify}}/">{{ tag }}</a>
+        <span class="tag-count">{{ search.pages(`"${tag}"`).length }}</span>
+      </li>
+      {{ /for }}
+    </ul>
+  </section>
+</div>
