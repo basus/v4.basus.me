@@ -1,0 +1,15 @@
+2024-08-03:
+  - Added proper styling for mobile device sizes
+  - Wrapped dd and dt in divs for easier styling
+  - Adjusted main styling accordingly
+
+2024-08-02:
+  - Created new repository
+  - Added existing CSS, fonts and icons
+  - Wrote a new landing page and chose a new picture
+  - Added older journal and stream entries
+  - Added Plausible Analytics
+  - Added a Makefile to automate build and deployment
+
+2024-08-01:
+  - Set up clean directory for site, based on Version 3
