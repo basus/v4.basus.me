@@ -210,15 +210,16 @@ header > h2 {
     text-decoration: none;
     font-size: var(--para-font-size);
     font-family: var(--sans-serif-fonts);
-
-    /* This is to keep the icons (first column) properly aligned with the text (the
-       second column). Use with the dt and add elements below. */
-    display: grid;
-    grid-template-columns: 1.5em 1fr;
 }
 
-.meta dt {display: inline;}
-.meta dd {display: inline; margin: 0; }
+.meta-element { margin-bottom: 0.5rem; }
+.meta-element dt {
+    line-height: 1;
+    display: inline;
+    margin: 0 0.5em 0 0;
+    vertical-align: text-bottom;
+}
+.meta-element dd {display: inline; margin: 0; }
 
 /* Front page */
 #picture { grid-column: span 4; }
@@ -235,9 +236,6 @@ header > h2 {
 
 #outgoing {
     margin: 0;
-    display: grid;
-    line-height: 1.1;
-    grid-template-columns: 2em 1fr;
     text-decoration: none;
     color: var(--accent);
     font-weight: 600;
@@ -247,8 +245,10 @@ header > h2 {
 }
 
 #outgoing dt {
-    margin: 1rem 1rem 1rem 0.5rem;
+    line-height: 1;
     display: inline;
+    margin: 0 0.5em 0 0;
+    vertical-align: text-bottom;
 }
 
 #outgoing dd {
@@ -434,35 +434,88 @@ a.post-date :hover { color: var(--accent-alt); }
     stroke-linejoin: round;
     fill: none;
     margin-bottom: 0;
+    line-height: 1;
 }
 
 /* Styling for smaller screens */
 @media (max-width: 500px) {
-    #headshot {
-        left: 0;
-        float:none;
-        display: block;
-        position: relative;
-        margin: 0 auto 1em auto;
+    html {
+        /* Set this font size to be 90% of the full screen font size */
+        font-size: 56.25%;
     }
 
-    div#content {
-        margin: 1.5rem;
-        padding: 0;
-    }
-
-    div#info {
-        float: inherit;
-        position: inherit;
+    body {
         width: 100%;
-        text-align: left;
+        margin: 0;
     }
+
+    header {
+        width: 100%;
+        margin: 0;
+    }
+
+    header h1 { margin: 0 0 0 1rem; }
 
     nav { width: 100%; }
+    main { width: 90%; }
+    .row {
+        display: grid;
+        grid-template-columns: 1fr 1fr; }
 
-    .menu-item { flex: 1 1 0; }
+    /*** Front page ***/
+    #picture { grid-column: span 2; }
+    #profile {
+        width: 80%;
+        margin: 0 auto 0 auto;
+    }
+    #about  { grid-column: span 2; }
 
-    .menu-item a { margin: 0 auto; }
+    /* Flip the order to put the elsewhere links first */
+    #entries {
+        order: 2;
+        grid-column: 1/span 2;
+    }
+    #elsewhere {
+        order: 1;
+        grid-column: 1/span 2;
+    }
+
+    #elsewhere dl, .meta {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        row-gap: 1em;
+    }
+    .meta { row-gap: 0.5em }
+    #elsewhere div {
+        padding: 0.5em;
+        border: 2px solid var(--accent);
+    }
+    #outgoing dd {
+        margin: 0;
+    }
+    #outgoing dt,
+    .meta-element dt
+    {
+        margin: 0 0.5em 0 0;
+        line-height: 1;
+        vertical-align: text-bottom;
+    }
+
+    /*** Journal Entries ***/
+    .journal-entry .wide-sidebar,
+    .mainbar {
+        grid-column: 1/ span 2;
+    }
+
+    .post-date, .post-time {
+        display: inline;
+        font-weight: normal;
+        font-size: var(--smaller-font-size);
+
+    }
+
+    #latest, #by-tag { grid-column: 1/span 2; }
 
     footer p {
         max-width: 100%;
