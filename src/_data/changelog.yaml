@@ -1,5 +1,8 @@
 2024-08-04:
-  - Add RSS feed for journal entries
+  - Add RSS feed for journal entries and stream posts
+  - Rebuild stream section to accomodate RSS and pagination
+  - Streamline and clean up CSS by removing redundancies and fixing a small
+    number of core styles.
 
 2024-08-03:
   - Added proper styling for mobile device sizes

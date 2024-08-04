@@ -37,17 +37,17 @@ image: /images/front-page.jpg
     </div>
 </section>
 
-<section id="recents" class="row">
+<section id="below" class="row">
     <section id="entries">
         <h2>Latest Journal Entries</h2>
         <ul class="entry-list">
             {{ for entry of search.pages("section=journal basename!=index", "date=desc",4) }}
             <li class="entry">
-                <h3 class="entry-title">
+                <time class="metadata entry-list-date" datetime="{{ date |> date('yyyy-mm-dd')}}">{{ entry.date |> date('MMM do, yyyy')}}</time>
+                <h3 class="entry-list-title">
                     <a href="{{ entry.url }}">{{ entry.title }}</a>
                 </h3>
-                <time class="entry-date" datetime="{{ date |> date('yyyy-mm-dd')}}">{{ entry.date |> date('MMM do, yyyy')}}</time>
-                <p class="entry-desc">{{ entry.description }}</p>
+                <p class="entry-list-desc">{{ entry.description }}</p>
             </li>
             {{ /for }}
         </ul>

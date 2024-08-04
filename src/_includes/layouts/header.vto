@@ -6,7 +6,7 @@
     <ul id="menu">
 
       {{ for s of sections }}
-      <li class="menu-item {{if s == section }} menu-active{{/if}}" >
+      <li class="menu-section {{if s == section }} section-active{{/if}}" >
         <a href="/{{ s }}" title="{{ title }}">{{ s }}</a>
       </li>
       {{ /for }}

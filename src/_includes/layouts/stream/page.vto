@@ -1,7 +1,7 @@
 ---
 layout: layouts/default.vto
 ---
-{{ import { meta } from "./meta.vto"}}
+{{ import { meta } from "./functions.vto"}}
 <ul class="post-list">
 
   {{ for post of results }}
@@ -10,7 +10,7 @@ layout: layouts/default.vto
     {{ meta(post) }}
 
     <div class="mainbar">
-        {{ post.children }}
+      {{ post.children }}
     </div>
   </li>
   {{ /for }}
@@ -19,14 +19,14 @@ layout: layouts/default.vto
 
 
 <section class="pagination row">
-{{ if pagination.previous }}
-<a id="newer-pages" class="meta" href="{{ pagination.previous }}">&larr; Newer </a>
-{{/if}}
+  {{ if pagination.previous }}
+  <a id="newer-pages" class="metadata" href="{{ pagination.previous }}">&larr; Newer </a>
+  {{/if}}
 
 
-{{ if pagination.next }}
-<a id="older-pages" class="meta" href="{{ pagination.next }}">Older &rarr;</a>
+  {{ if pagination.next }}
+  <a id="older-pages" class="metadata" href="{{ pagination.next }}">Older &rarr;</a>
 
-{{/if}}
+  {{/if}}
 
 </section>

@@ -8,9 +8,9 @@
       <article class="row journal-entry">
 
         <div class="wide-sidebar">
-          <dl class="meta">
+          <dl class="metadata">
             {{ if started }}
-            <div class="meta-element">
+            <div>
             <dt>
               <svg class="feather">
                 <title>Started</title>
@@ -22,7 +22,7 @@
             {{ /if }}
 
             {{ if published }}
-            <div class="meta-element">
+            <div>
             <dt>
               <svg class="feather">
                 <title>Published</title>
@@ -34,7 +34,7 @@
             {{ /if }}
 
             {{ if modified }}
-            <div class="meta-element">
+            <div>
             <dt>
               <svg class="feather">
                 <title>Modified</title>
@@ -47,7 +47,7 @@
 
             {{ set ts = tags.filter(t => t !== "journal")}}
             {{ if ts && ts.length > 0 }}
-            <div class="meta-element">
+            <div>
             <dt>
               <svg class="feather">
                 <use href="/icons/feather-sprite.svg#tag"/>

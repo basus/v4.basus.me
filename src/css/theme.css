@@ -4,9 +4,9 @@
     --mono-fonts: : "Fira Code", monospace;
     --serif-fonts:  "Source Serif", Georgia, serif;
     --sans-serif-fonts:  "Source Sans", Helvetica Neue, Helvetica, Arial;
-    --para-font-size: 1.85rem;
-    --smaller-font-size: 1.6rem;
-    --larger-font-size: 2.1rem;
+    --para-font-size: 1.8rem;
+    --smaller-font-size: 1.7rem;
+    --larger-font-size: 2rem;
 
     /* Sizes */
     --main-width: 70%;
@@ -20,7 +20,6 @@
 html {
     /* Set this font size so that future sizes in rem will be 1/10th the size in pixels */
     font-size: 62.5%;
-    line-height: 1.5;
     tab-size: 4;
 }
 
@@ -63,13 +62,14 @@ blockquote {
     font-weight: 400;
 }
 
-figure { margin: 0; }
+dl, figure { margin: 0; }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: var(--sans-serif-fonts);
+    margin: 0;
     color: var(--text-hdr);
     font-size: inherit;
-    margin: 0 0 .25rem 0;
+    font-weight: 600;
+    font-family: var(--sans-serif-fonts);
 }
 
 h1 {
@@ -77,21 +77,13 @@ h1 {
     text-transform: uppercase;
 }
 
-h1 a {
+h1 a, h2 a, h3 a {
     text-decoration: none;
-    color: inherit;
+    color: var(--text-hdr);
 }
 
-h2 {
-    margin-top: 1em;
-    margin-bottom: 0.5em;
-    font-size: 2.5rem;
-}
-
-h3 {
-    font-size: 2.25rem;
-    font-weight: normal;
-}
+h2 { font-size: 2.6rem; }
+h3 { font-size: var(--larger-font-size); }
 
 hr {
   width: 20rem;
@@ -129,9 +121,9 @@ pre { padding: 1em; }
 
 /* Header styling */
 header > h1 {
+    font-weight: bold;
     display: inline-block;
     margin: 0.25rem 0 0 0.25rem;
-    font-family: var(--sans-serif-fonts);
 }
 
 header > h2 {
@@ -143,46 +135,46 @@ header > h2 {
 
 /* Navigation bar styling */
 #menu {
-    display: flex;
-    align-items: center;
+    padding: 0;
     clear: both;
     width: 100%;
+    display: flex;
+    align-items: center;
     max-width: 100%;
     position: relative;
-    padding: 0px 0;
     border-bottom: 2px solid var(--text);
 }
 
-.menu-item {
+.menu-section {
     display: inline-flex;
-    padding: 0.75em 0.75em;
-    border-width: 0px 2px 0px 0px;
+    padding: 0.5em 0.5em;
     border-style: solid;
+    border-width: 0px 2px 0px 0px;
     border-image: linear-gradient(to bottom,  rgba(255,255,255,0),
                                   var(--text)) 1 100%;
 }
 
-.menu-item a {
+.menu-section a {
     display: inline-block;
     text-align: left;
-    font-size: 1.5rem;
+    letter-spacing: 1px;
     text-decoration: none;
     text-transform: uppercase;
+    font-size: var(--smaller-font-size);
     font-family: var(--sans-serif-fonts);
-    letter-spacing: 1px;
 }
 
-.menu-active {
-    color: var(--text);
+.section-active, section-active a {
+    color: var(--text-hdr);
     font-weight: bold;
     background: linear-gradient(0deg, var(--text-alt), var(--bg));
 }
 
 .menu-iconic {
-    display: inline-flex;
+    right: 0;
     padding: 0 0.75em;
     position: absolute;
-    right: 0;
+    display: inline-flex;
 }
 
 .menu-icon {
@@ -223,25 +215,27 @@ header > h2 {
     clear: both;
 }
 
-/** Meta elements **/
-.meta {
-    margin: 0;
-    max-width: 85%;
-    line-height: 1.1;
+/** Metadata elements **/
+
+.metadata, .metadata a, .metadata p {
     color: var(--accent);
     text-decoration: none;
-    font-size: var(--para-font-size);
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: var(--smaller-font-size);
     font-family: var(--sans-serif-fonts);
 }
+.metadata a:hover { color: var(--accent-alt); }
 
-.meta-element { margin-bottom: 0.5rem; }
-.meta-element dt {
+/* Useful for styling a pair of an icon and some text */
+.metadata div { margin-bottom: 0.5rem; }
+.metadata dt {
     line-height: 1;
     display: inline;
     margin: 0 0.5em 0 0;
-    vertical-align: text-bottom;
+    vertical-align: text-bottom
 }
-.meta-element dd {display: inline; margin: 0; }
+.metadata dd {display: inline; margin: 0; }
 
 /* Front page */
 #picture { grid-column: span 4; }
@@ -289,11 +283,10 @@ header > h2 {
 }
 
 #outgoing dd a:hover { color: var(--accent-alt); }
-/* Archive page */
 
-#latest {
-    grid-column: 2/span 5;
-}
+
+/* Journal Archive page */
+#latest { grid-column: 2/span 5; }
 
 .entry-list {
     padding: 0;
@@ -306,33 +299,13 @@ header > h2 {
     border-bottom: 2px solid var(--bg-alt);
 }
 
-.entry-title, .entry-title a {
+.entry-list-date { display: block; }
+.entry-list-desc {
     margin: 0;
-    font-weight: 600;
-    display: inline-block;
-    text-decoration: none;
-    color: var(--text-hdr);
-}
-
-.entry-date {
-    display: block;
-    line-height: 1;
-    color: var(--accent);
-    text-transform: uppercase;
-    font-weight: 600;
-    font-size: var(--smaller-font-size);
-    font-family: var(--sans-serif-fonts);
-}
-
-.entry-desc {
     font-style: italic;
-    margin: 0.25rem 0 0 0;
 }
 
-.entry-heading {
-    line-height: 1;             /* keeps the heading at the same level as meta */
-    margin-bottom: 1rem;
-}
+.entry-heading { margin-bottom: 1rem;}
 
 #by-tag { grid-column: 8/-2; }
 
@@ -350,26 +323,16 @@ header > h2 {
     border-bottom: 1.5px solid var(--bg-alt);
 }
 
-#tag-list a {
-    text-decoration: none;
-    color: var(--accent);
-    font-weight: 600;
-    font-family: var(--sans-serif-fonts);
-    text-transform: uppercase;
-}
-
 .tag {
     margin: 0;
     position: relative;
 }
 
 .tag-count {
-    display: inline;
     right: 0;
+    display: inline;
     position: absolute;
     text-align: right;
-    color: var(--accent);
-    font-family: var(--sans-serif-fonts);
 }
 
 /** Stream index page(s) **/
@@ -386,23 +349,7 @@ header > h2 {
     border-bottom: 2px solid var(--bg-alt);
 }
 
-.post-date {
-    display: block;
-    color: var(--accent);
-    text-decoration: none;
-    font-weight: bold;
-    font-size: var(--larger-font-size);
-    font-family: var(--sans-serif-fonts);
-}
-
-a.post-date :hover { color: var(--accent-alt); }
-
-.post-time {
-    clear: both;
-    line-height: 1;
-    color: var(--accent);
-    font-family: var(--sans-serif-fonts);
-}
+.post-date, .post-time {display: inline;}
 
 #newer-pages { grid-column: 1/span 2 }
 #older-pages { grid-column: -2/span 2 }
@@ -459,7 +406,6 @@ a.post-date :hover { color: var(--accent-alt); }
     stroke-linejoin: round;
     fill: none;
     margin-bottom: 0;
-    line-height: 1;
 }
 
 /* Styling for smaller screens */
@@ -505,13 +451,12 @@ a.post-date :hover { color: var(--accent-alt); }
         grid-column: 1/span 2;
     }
 
-    #elsewhere dl, .meta {
+    #elsewhere dl {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
         row-gap: 1em;
     }
-    .meta { row-gap: 0.5em }
     #elsewhere div {
         padding: 0.5em;
         border: 2px solid var(--accent);
@@ -520,7 +465,6 @@ a.post-date :hover { color: var(--accent-alt); }
         margin: 0;
     }
     #outgoing dt,
-    .meta-element dt
     {
         margin: 0 0.5em 0 0;
         line-height: 1;
@@ -528,16 +472,12 @@ a.post-date :hover { color: var(--accent-alt); }
     }
 
     /*** Journal Entries ***/
-    .journal-entry .wide-sidebar,
-    .mainbar {
-        grid-column: 1/ span 2;
-    }
+    .journal-entry .wide-sidebar, .mainbar { grid-column: 1/ span 2; }
 
-    .post-date, .post-time {
-        display: inline;
-        font-weight: normal;
-        font-size: var(--smaller-font-size);
-
+    .journal-entry .metadata {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
     }
 
     #newer-pages { grid-column: 1}
@@ -548,16 +488,4 @@ a.post-date :hover { color: var(--accent-alt); }
         max-width: 100%;
         text-align: left;
     }
-
-    .entry-meta {
-        left: 0;
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        position: relative;
-    }
-
-    .entry-date { flex-grow: 1; }
-    .entry-tags { flex-grow: 0; }
-
 }

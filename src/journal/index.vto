@@ -29,11 +29,11 @@ layout: layouts/default.vto
     <ul class="entry-list">
       {{ for entry of search.pages("section=journal basename!=index", "date=desc",4) }}
       <li class="entry">
-        <h3 class="entry-title">
+        <time class="metadata entry-list-date" datetime="{{ date |> date('yyyy-mm-dd')}}">{{ entry.date |> date('MMM do, yyyy')}}</time>
+        <h3 class="entry-list-title">
           <a href="{{ entry.url }}">{{ entry.title }}</a>
         </h3>
-        <time class="entry-date" datetime="{{ date |> date('yyyy-mm-dd')}}">{{ entry.date |> date('MMM do, yyyy')}}</time>
-        <p class="entry-desc">{{ entry.description }}</p>
+        <p class="entry-list-desc">{{ entry.description }}</p>
       </li>
       {{ /for }}
     </ul>
@@ -44,7 +44,7 @@ layout: layouts/default.vto
     <h2>Browse by Tag</h2>
     <ul id="tag-list">
       {{ for tag of search.values("tags").sort() }}
-      <li class="tag">
+      <li class="tag metadata">
         <a href="tags/{{ tag |> slugify}}/">{{ tag }}</a>
         <span class="tag-count">{{ search.pages(`"${tag}"`).length }}</span>
       </li>
