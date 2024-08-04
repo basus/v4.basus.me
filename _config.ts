@@ -1,5 +1,6 @@
 import lume from "lume/mod.ts";
 import date from "lume/plugins/date.ts";
+import feed from "lume/plugins/feed.ts";
 import slugify_urls from "lume/plugins/slugify_urls.ts";
 
 const site = lume({
@@ -15,7 +16,26 @@ site.copy([".woff", ".woff2",".css" ])
 // Copy images files
 site.copy([".jpg", ".gif", ".png", ".svg"]);
 
-site.use(date());
-site.use(slugify_urls());
+// Feed configurations
+const journal_feed = {
+    output: ["/feeds/journal.xml"],
+    query: "section=journal basename!=index",
+    sort: "date=desc",
+    limit: 10,
+    info : {
+        title: "Basus.me / Journal",
+        description: "Shrutarshi Basu's medium-form journal",
+        generator: true,
+    },
+    items: {
+        title: "=title",
+        description: "=description",
+        published: "=date",
+        image: "=cover"
+    }};
+
+site.use(date())
+    .use(slugify_urls())
+    .use(feed(journal_feed));
 
 export default site;

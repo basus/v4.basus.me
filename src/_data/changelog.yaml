@@ -1,3 +1,6 @@
+2024-08-04:
+  - Add RSS feed for journal entries
+
 2024-08-03:
   - Added proper styling for mobile device sizes
   - Wrapped dd and dt in divs for easier styling

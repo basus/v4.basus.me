@@ -4,11 +4,21 @@
 
   <nav>
     <ul id="menu">
+
       {{ for s of sections }}
       <li class="menu-item {{if s == section }} menu-active{{/if}}" >
         <a href="/{{ s }}" title="{{ title }}">{{ s }}</a>
       </li>
       {{ /for }}
+
+      <li class="menu-iconic">
+        <a href="/feeds/journal.xml">
+          <svg class="menu-icon">
+            <title>RSS Feeds</title>
+            <use href="/icons/feather-sprite.svg#rss"/>
+          </svg>
+        </a>
+      </li>
     </ul>
   </nav>
 

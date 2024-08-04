@@ -144,6 +144,7 @@ header > h2 {
 /* Navigation bar styling */
 #menu {
     display: flex;
+    align-items: center;
     clear: both;
     width: 100%;
     max-width: 100%;
@@ -154,6 +155,7 @@ header > h2 {
 
 .menu-item {
     display: inline-flex;
+    padding: 0.75em 0.75em;
     border-width: 0px 2px 0px 0px;
     border-style: solid;
     border-image: linear-gradient(to bottom,  rgba(255,255,255,0),
@@ -162,7 +164,6 @@ header > h2 {
 
 .menu-item a {
     display: inline-block;
-    padding: 0.75em 0.75em;
     text-align: left;
     font-size: 1.5rem;
     text-decoration: none;
@@ -176,6 +177,27 @@ header > h2 {
     font-weight: bold;
     background: linear-gradient(0deg, var(--text-alt), var(--bg));
 }
+
+.menu-iconic {
+    display: inline-flex;
+    padding: 0 0.75em;
+    position: absolute;
+    right: 0;
+}
+
+.menu-icon {
+    display: inline;
+    height: 1.5em;
+    width: 1.5em;
+    stroke: var(--accent);
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+    margin-bottom: 0;
+}
+
+
 
 /*** Utility classes for easy grid layouts ***/
 
