@@ -1,7 +1,9 @@
 ---
-layout: layouts/stream/smart.vto
 post_type: video
 date: 2009-11-13T14:44:00-04:00
 uri: https://www.youtube.com/embed/A7y7NafWXeM?feature=oembed&amp;enablejsapi=1
 caption: "Google Docs: A Love Letter"
 ---
+
+{{ import {video} from "layouts/stream/functions.vto" }}
+{{ video(uri, caption) }}

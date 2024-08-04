@@ -1,7 +1,9 @@
 ---
-layout: layouts/stream/smart.vto
 post_type: video
 date: 2009-10-18T22:20:00-04:00
 uri: https://www.youtube.com/embed/rDu2A3WzQpo?feature=oembed&amp;enablejsapi=1
 caption: What is Google Wave?
 ---
+
+{{ import {video} from "layouts/stream/functions.vto" }}
+{{ video(uri, caption) }}

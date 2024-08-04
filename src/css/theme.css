@@ -404,6 +404,9 @@ a.post-date :hover { color: var(--accent-alt); }
     font-family: var(--sans-serif-fonts);
 }
 
+#newer-pages { grid-column: 1/span 2 }
+#older-pages { grid-column: -2/span 2 }
+
 /** Embedded videos */
 .embedded-video {
     width: 100%;
@@ -537,6 +540,8 @@ a.post-date :hover { color: var(--accent-alt); }
 
     }
 
+    #newer-pages { grid-column: 1}
+    #older-pages { grid-column: 2 }
     #latest, #by-tag { grid-column: 1/span 2; }
 
     footer p {

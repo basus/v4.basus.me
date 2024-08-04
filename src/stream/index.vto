@@ -1,9 +1,10 @@
 ---
 title: Stream
+renderOrder: 1
 layout: layouts/default.vto
 ---
 
-{{ import { meta } from "../_includes/layouts/stream/meta.vto"}}
+{{ import { meta } from "/layouts/stream/meta.vto"}}
 <ul class="post-list">
 
   {{ for post of search.pages("section=stream basename!=index", "date=desc", 10) }}
@@ -12,22 +13,13 @@ layout: layouts/default.vto
     {{ meta(post) }}
    
     <div class="mainbar">
-
-        {{ if post.post_type === "video" }}
-           {{ import { video } from "../_includes/layouts/stream/video.vto" }}
-           {{ video(post.uri, post.caption, post.content) }}
-        {{ else if post.post_type === "images" }}
-           {{ import i from "../_includes/layouts/stream/images.vto" }}
-           {{ i.images(post.images, post.caption, post.content) }}
-        {{ else if post.post_type === "link" }}
-           {{ import { link } from "../_includes/layouts/stream/link.vto" }}
-           {{ link(post.uri, post.title, post.url, post.content) }}
-        {{ else }}
-           {{ post.content }}
-        {{ /if }}
-
+        {{ post.children }}
     </div>
   </li>
   {{ /for }}
 
 </ul>
+
+<section class="pagination row">
+    <a id="older-pages" class="meta" href="/stream/pages/2">Older &rarr;</a>
+</section>

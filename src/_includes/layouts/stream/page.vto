@@ -1,0 +1,32 @@
+---
+layout: layouts/default.vto
+---
+{{ import { meta } from "./meta.vto"}}
+<ul class="post-list">
+
+  {{ for post of results }}
+  <li class="post row">
+
+    {{ meta(post) }}
+
+    <div class="mainbar">
+        {{ post.children }}
+    </div>
+  </li>
+  {{ /for }}
+
+</ul>
+
+
+<section class="pagination row">
+{{ if pagination.previous }}
+<a id="newer-pages" class="meta" href="{{ pagination.previous }}">&larr; Newer </a>
+{{/if}}
+
+
+{{ if pagination.next }}
+<a id="older-pages" class="meta" href="{{ pagination.next }}">Older &rarr;</a>
+
+{{/if}}
+
+</section>

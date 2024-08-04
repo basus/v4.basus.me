@@ -34,8 +34,28 @@ const journal_feed = {
         image: "=cover"
     }};
 
+const stream_feed = {
+    output: ["/feeds/stream.xml"],
+    query: "section=stream basename!=index",
+    sort: "date=desc",
+    limit: 10,
+    info : {
+        title: "Basus.me / Stream",
+        description: "Shrutarshi Basu's short-form stream",
+        generator: true,
+    },
+    items: {
+        title: "=title",
+        description: "=description",
+        published: "=date",
+        image: "=cover"
+    }};
+
+
 site.use(date())
     .use(slugify_urls())
-    .use(feed(journal_feed));
+    .use(feed(journal_feed))
+    .use(feed(stream_feed))
+;
 
 export default site;

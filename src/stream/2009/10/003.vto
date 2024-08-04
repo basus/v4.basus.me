@@ -1,5 +1,4 @@
 ---
-layout: layouts/stream/smart.vto
 post_type: images
 date: 2009-10-11T22:44:00-04:00
 images:
@@ -8,3 +7,6 @@ images:
     alt: Depicton of the Browser Wars from 2002 to 2008 using medieval knights
 caption: The Browser Wars
 ---
+
+{{ import i from "layouts/stream/functions.vto" }}
+{{ i.images(images, caption, "") }}

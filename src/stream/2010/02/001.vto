@@ -1,7 +1,9 @@
 ---
-layout: layouts/stream/smart.vto
 post_type: video
 date: 2010-02-07T14:29:00-04:00
 uri: https://player.vimeo.com/video/9225227?title=0&amp;byline=0&amp;portrait=0&amp;app_id=122963
 caption: Twitter Code Swarm on Vimeo
 ---
+
+{{ import {video} from "layouts/stream/functions.vto" }}
+{{ video(uri, caption) }}

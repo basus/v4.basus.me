@@ -1,10 +1,12 @@
 ---
-layout: layouts/stream/smart.vto
 post_type: link
 date: 2010-02-16T17:36:00-04:00
 uri: http://venomousporridge.com/post/389785000/a-conversation-i-have-every-month-or-so
 title: A conversation I have every month or so
 ---
+
+{{ import {link} from "layouts/stream/functions.vto" }}
+{{ link(uri, title, url) }}
 
 <blockquote>
 

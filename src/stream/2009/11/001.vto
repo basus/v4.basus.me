@@ -1,7 +1,9 @@
 ---
-layout: layouts/stream/smart.vto
 post_type: video
 date: 2009-11-11T16:42:00-04:00
 uri: https://www.youtube.com/embed/rKnDgT73v8s?feature=oembed&amp;enablejsapi=1
 caption: The Go Programming Language
 ---
+
+{{ import {video} from "layouts/stream/functions.vto" }}
+{{ video(uri, caption) }}

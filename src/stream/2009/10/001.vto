@@ -1,7 +1,9 @@
 ---
-layout: layouts/stream/smart.vto
 post_type: video
 date: 2009-10-09T13:58:00-04:00
 uri: https://www.youtube.com/embed/jTXm5lxp2xs?feature=oembed&amp;enablejsapi=1&amp;wmode=opaque
 caption: Send me an Angel &ndash; Sleepthief &amp; Kristy Thirsk
 ---
+
+{{ import { video } from "layouts/stream/functions.vto" }}
+{{ video(uri, caption, "") }}

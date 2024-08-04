@@ -1,7 +1,9 @@
 ---
-layout: layouts/stream/smart.vto
 post_type: video
 date: 2009-10-16T12:45:00-04:00
 uri: https://www.youtube.com/embed/xcxF9oz9Cu0?feature=oembed&amp;wmode=opaque
 caption: "Google Wave Cinema: Pulp Fiction"
 ---
+
+{{ import {video} from "layouts/stream/functions.vto" }}
+{{ video(uri, caption) }}

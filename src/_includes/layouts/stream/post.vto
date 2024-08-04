@@ -2,12 +2,13 @@
 layout: layouts/default.vto
 ---
 
-<article class=" post row">
-    {{ import { meta } from "./meta.vto"}}
+<article class="row">
+    {{ import { meta } from "./functions.vto" }}
     {{ meta(page.data) }}
 
     <div class="mainbar">
+
         {{ content }}
+
     </div>
-   
 </article>
