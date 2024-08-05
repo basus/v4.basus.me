@@ -400,11 +400,12 @@ header > h2 {
 }
 
 .image-caption, .image-caption a, .image-caption a:visited {
-    color: var(--text);
+    color: var(--accent);
     text-align: center;
+    text-transform: uppercase;
     font-weight: 600;
+    font-size: var(--smaller-font-size);
     font-family: var(--sans-serif-fonts);
-    font-size: var(--larger-font-size);
 }
 
 /** Link posts **/
