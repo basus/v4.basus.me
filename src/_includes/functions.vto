@@ -1,0 +1,20 @@
+
+{{ export function feather (icon, title) }}
+<svg class="feather">
+    <title>{{title}}</title>
+    <use href="/icons/feather-sprite.svg#{{ icon }}"/>
+</svg>
+
+{{ /export }}
+
+{{ export function icon_button(uri, icon, title)}}
+
+<a class="ui-button" href="{{ uri }}">
+    <span class="ui-icon"> <svg class="feather">
+            <title>{{title}}</title>
+            <use href="/icons/feather-sprite.svg#{{ icon }}"/>
+    </svg></span>
+    <span>{{ title }}</span>
+</a>
+
+{{ /export }}

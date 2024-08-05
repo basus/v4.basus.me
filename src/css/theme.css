@@ -119,6 +119,8 @@ code, pre {
 
 pre { padding: 1em; }
 
+strong { font-weight: 600; }
+
 /* Header styling */
 header > h1 {
     font-weight: bold;
@@ -253,6 +255,23 @@ header > h2 {
     text-transform: uppercase;
 }
 
+.ui-bar {
+    padding: 0;
+    clear: both;
+    width: 100%;
+    list-style: none;
+    display: flex;
+    row-gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.ui-icon {
+   line-height: 1;
+   padding-right: 0.5rem;
+   vertical-align: text-bottom
+}
 /* Front page */
 #picture { grid-column: span 4; }
 
@@ -264,6 +283,12 @@ header > h2 {
 
 #about { grid-column: 5/-1; }
 #entries { grid-column: 5/span 5; }
+
+.contact {
+    line-height: 1;
+    vertical-align: text-bottom;}
+
+
 #elsewhere { grid-column: 11/span 2; }
 
 #outgoing {

@@ -34,6 +34,29 @@ image: /images/front-page.jpg
             University.
         </p>
 
+        <p> <strong>
+            I'm currently looking for research &amp; engineering positions
+            related to compilers, programming languages, and applied formal
+            methods. If you would be interested in working with me, please <a
+            href="mailto:shr[AT]basus.me">get in touch</a>.
+        </strong></p>
+
+        {{ import { icon_button } from "functions.vto" }}
+        <ul id="get-in-touch" class="ui-bar">
+            <li class="ui">
+                {{ icon_button("mailto:shr@basus.me", "mail", "Email") }}
+            </li>
+            <li class="ui">
+                {{ icon_button("https://github.com/basus/", "github", "GitHub") }}
+            </li>
+            <li class="ui">
+                {{ icon_button("https://threads.net/@basus/", "type", "Threads") }}
+            </li>
+            <li class="ui">
+                {{ icon_button("https://mastodon.social/@basus/", "activity", "Mastodon") }}
+            </li>
+        </ul>
+
     </div>
 </section>
 
