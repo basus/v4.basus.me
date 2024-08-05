@@ -237,6 +237,22 @@ header > h2 {
 }
 .metadata dd {display: inline; margin: 0; }
 
+/**  Non-metadata UI elements **/
+.ui {
+    padding: 1rem;
+    background: var(--text-alt);
+    border: 1.5px solid var(--bg-alt);
+    font-weight: 600;
+    font-size: var(--smaller-font-size);
+    font-family: var(--sans-serif-fonts);
+}
+
+.ui-button {
+    color: var(--accent);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
 /* Front page */
 #picture { grid-column: span 4; }
 
@@ -354,8 +370,14 @@ header > h2 {
     font-size: var(--para-font-size);
 }
 
-#newer-pages { grid-column: 1/span 2 }
-#older-pages { grid-column: -2/span 2; text-align: right; }
+#newer-pages {
+    padding: 1rem 0;
+    grid-column: 1/span 2 }
+#older-pages {
+    padding: 1rem 0;
+    grid-column: -2/span 2;
+    text-align: right; }
+
 
 /** Embedded videos */
 .embedded-video {

@@ -22,12 +22,16 @@ renderOrder: 1
 
 <section class="pagination row">
   {{ if pagination.previous }}
-  <a id="newer-pages" class="metadata" href="{{ pagination.previous }}">&larr; Newer </a>
+  <div id="newer-pages">
+    <a  class="ui ui-button" href="{{ pagination.previous }}">&larr; Newer </a>
+  </div>
   {{/if}}
 
 
   {{ if pagination.next }}
-  <a id="older-pages" class="metadata" href="{{ pagination.next }}">Older &rarr;</a>
+  <div id="older-pages">
+    <a class="ui ui-button" href="{{ pagination.next }}">Older &rarr;</a>
+  </div>
 
   {{/if}}
 
