@@ -5,8 +5,8 @@
     --serif-fonts:  "Source Serif", Georgia, serif;
     --sans-serif-fonts:  "Source Sans", Helvetica Neue, Helvetica, Arial;
     --para-font-size: 1.8rem;
-    --smaller-font-size: 1.7rem;
-    --larger-font-size: 2rem;
+    --smaller-font-size: 1.5rem;
+    --larger-font-size: 2.1rem;
 
     /* Sizes */
     --main-width: 70%;
@@ -217,7 +217,7 @@ header > h2 {
 
 /** Metadata elements **/
 
-.metadata, .metadata a, .metadata p {
+.metadata, .metadata a {
     color: var(--accent);
     text-decoration: none;
     text-transform: uppercase;
@@ -349,10 +349,13 @@ header > h2 {
     border-bottom: 2px solid var(--bg-alt);
 }
 
-.post-date, .post-time {display: inline;}
+.post-date, .post-time {
+    display: inline;
+    font-size: var(--para-font-size);
+}
 
 #newer-pages { grid-column: 1/span 2 }
-#older-pages { grid-column: -2/span 2 }
+#older-pages { grid-column: -2/span 2; text-align: right; }
 
 /** Embedded videos */
 .embedded-video {
@@ -384,15 +387,21 @@ header > h2 {
 
 /** Link posts **/
 
-.shared-link {
+.post-link {
     margin: 0;
+    line-height: 1;
     display: flex;
     align-items: center;
 }
 
 .permalink {
-    height: 1.1em;
+    height: 1em;
     margin-right: 1rem;
+}
+
+/** Quote posts **/
+.post-quote {
+    margin-top: 0;
 }
 
 /* Styling for feather icons */
@@ -481,7 +490,7 @@ header > h2 {
     }
 
     #newer-pages { grid-column: 1}
-    #older-pages { grid-column: 2 }
+    #older-pages { grid-column: 2; text-align: right; }
     #latest, #by-tag { grid-column: 1/span 2; }
 
     footer p {

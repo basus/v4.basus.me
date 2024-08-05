@@ -1,12 +1,11 @@
 {{ export function meta (post) }}
-    <div class="metadata wide-sidebar">
+    <div class="wide-sidebar">
 
-      <a class="post-date" href="{{ post.url }}">
+      <a class="metadata" href="{{ post.url }}">
         <time class="post-date" datetime="{{ post.date |> date('yyyy-mm-dd h:mm')}}">
           {{ post.date |> date('MMM do, yyyy')}}
         </time>
+        at <time class="post-time">{{ post.date |> date(' h:mma') }}</time>
       </a>
-
-      <p class="post-time">at <time>{{ post.date |> date(' h:mma') }}</time></p>
     </div>
 {{ /export }}
