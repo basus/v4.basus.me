@@ -282,7 +282,10 @@ header > h2 {
 }
 
 #about { grid-column: 5/-1; }
-#entries { grid-column: 5/span 5; }
+#below { margin-top: 3em; }
+#entries { grid-column: 5/-1; }
+
+#more-pages { grid-column: 1/span 4; }
 
 .contact {
     line-height: 1;
@@ -312,7 +315,7 @@ header > h2 {
 
 #by-tag { grid-column: 8/-2; }
 
-#tag-list {
+#tag-list, #entry-grid {
     padding: 0;
     display: grid;
     column-gap: 10%;
@@ -461,10 +464,9 @@ header > h2 {
     }
     #about  { grid-column: span 2; }
 
-    /* Flip the order to put the elsewhere links first */
     #entries {
-        order: 2;
-        grid-column: 1/span 2;
+        width: 100%;
+        grid-column: span 2;
     }
 
     /*** Journal Entries ***/
