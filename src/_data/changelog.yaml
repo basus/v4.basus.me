@@ -1,3 +1,9 @@
+2024-08-06:
+  - Add Catppuccin color themes (Latte for light and Macchiato for dark)
+  - Various style tweaks for quotes, links and code/pre
+  - Defauly OpenGraph preview image for all posts
+  - Better rsync options for faster deployment
+
 2024-08-04:
   - Add RSS feed for journal entries and stream posts
   - Rebuild stream section to accomodate RSS and pagination
