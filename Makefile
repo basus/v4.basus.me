@@ -9,7 +9,7 @@ build:
 	lume
 
 deploy:
-	rsync -rltv \
+	rsync -rltc \
 		--exclude="Makefile" \
 		--exclude="*~" \
 		--exclude=".git" \
