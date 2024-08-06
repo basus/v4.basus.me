@@ -82,7 +82,10 @@ h1 a, h2 a, h3 a {
     color: var(--text-hdr);
 }
 
-h2 { font-size: 2.6rem; }
+h2 {
+    font-size: 2.6rem;
+    color: var(--text-hdr);
+}
 h3 { font-size: var(--larger-font-size); }
 
 hr {

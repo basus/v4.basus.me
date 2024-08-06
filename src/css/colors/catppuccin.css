@@ -1,0 +1,31 @@
+/*
+ * The usage pattern derived from Rob Weychert=
+ * https://v6.robweychert.com/blog/2018/02/v6-color/
+ *
+ * The colors themselves are based on the Catppuccin color color theme,
+ * Latte for light mode and Macchiato for dark mode
+*/
+
+@media (prefers-color-scheme: light){
+    :root {
+        --text: #6d6f83;         /* Dark color, body text */
+        --text-hdr: #4d4f67;     /* Darker color, headers */
+        --text-alt: #eff1f5;     /* Lightest color, usually white */
+        --bg: #e7e9ee;           /* 2nd lightest, distinguishable from white */
+        --bg-alt: #cdd0d9;       /* Darker than bg, borders & non-text UI */
+        --accent: #7686f5;       /* 2nd brightest, metadata */
+        --accent-alt: #3465ec;   /* Most distinct, links */
+    }
+}
+
+@media (prefers-color-scheme: dark){
+    :root {
+        --text: #ccd3f2;         /* Dark color, body text */
+        --text-hdr: #a6adc8;     /* Darker color, headers */
+        --text-alt: #1e1e2d;     /* Lightest color, usually white */
+        --bg: #252729;           /* 2nd lightest, distinguishable from white */
+        --bg-alt: #8187a0;       /* Darker than bg, borders & non-text UI */
+        --accent: #b8bdf3;       /* 2nd brightest, metadata */
+        --accent-alt: #3465ec;   /* Most distinct, links */
+    }
+}
