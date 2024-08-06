@@ -9,9 +9,9 @@ build:
 	lume
 
 deploy:
-	rsync -rltc \
+	rsync -rltcv \
+		--exclude="/fonts" \
 		--exclude="Makefile" \
-		--exclude="*~" \
 		--exclude=".git" \
 	_site/ basus@basus.me:/www/v4
 
