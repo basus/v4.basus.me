@@ -26,6 +26,6 @@
         --bg: #252729;           /* 2nd lightest, distinguishable from white */
         --bg-alt: #8187a0;       /* Darker than bg, borders & non-text UI */
         --accent: #b8bdf3;       /* 2nd brightest, metadata */
-        --accent-alt: #3465ec;   /* Most distinct, links */
+        --accent-alt: #91acee;   /* Most distinct, links */
     }
 }

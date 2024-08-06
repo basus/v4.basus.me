@@ -1,7 +1,7 @@
 :root {
 
     /* Fonts */
-    --mono-fonts: : "Fira Code", monospace;
+    --mono-fonts: "Fira Code", monospace;
     --serif-fonts:  "Source Serif", Georgia, serif;
     --sans-serif-fonts:  "Source Sans", Helvetica Neue, Helvetica, Arial;
     --para-font-size: 1.8rem;
@@ -42,10 +42,10 @@ p, ul {
     margin: 0 0 1.75rem 0 ; }
 
 a {
-    color: var(--text);
-    text-decoration: underline;
+    color: var(--accent-alt);
+    text-decoration: none;
     text-decoration-color: var(--accent-alt);
-    text-decoration-thickness: 0.1em;
+    text-decoration-thickness: 0.1rem;
 }
 
 a:hover { color: var(--accent-alt); }
@@ -117,7 +117,8 @@ footer p {
 }
 
 code, pre {
-    font-family: "Fira Code", monospace;
+    font-family: var(--mono-fonts);
+    font-size: var(--smaller-font-size);
 }
 
 pre { padding: 1em; }
@@ -177,6 +178,7 @@ header > h2 {
 
 .menu-iconic {
     right: 0;
+    bottom: 0.75em ;
     padding: 0 0.75em;
     position: absolute;
     display: inline-flex;

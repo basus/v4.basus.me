@@ -11,13 +11,9 @@
       </li>
       {{ /for }}
 
-      <li class="menu-iconic">
-        <a href="/feeds/journal.xml">
-          <svg class="menu-icon">
-            <title>RSS Feeds</title>
-            <use href="/icons/feather-sprite.svg#rss"/>
-          </svg>
-        </a>
+      {{ import { icon_button } from "functions.vto" }}
+      <li class="menu-iconic ui">
+        {{ icon_button("/feeds/journal.xml", "rss", "RSS") }}
       </li>
     </ul>
   </nav>
