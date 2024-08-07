@@ -17,3 +17,8 @@ deploy:
 
 fmt:
 	cd _site; dprint fmt
+
+# targets to add new posts and entries
+#
+fleet:
+	lume new fleet && cat .new-file-path | xargs emacsclient &
