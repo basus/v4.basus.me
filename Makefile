@@ -5,6 +5,7 @@ default: deploy
 
 all: build fmt deploy
 
+build: export TZ = "America/New_York"
 build:
 	lume
 
