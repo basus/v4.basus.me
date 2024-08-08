@@ -234,6 +234,8 @@ header > h2 {
 }
 .metadata a:hover { color: var(--accent-alt); }
 
+.metadata svg {stroke: var(--accent);}
+
 /* Useful for styling a pair of an icon and some text */
 .metadata div { margin-bottom: 0.5rem; }
 .metadata dt {
@@ -246,29 +248,38 @@ header > h2 {
 
 /**  Non-metadata UI elements **/
 .ui {
-    padding: 1rem;
     background: var(--text-alt);
-    border: 1.5px solid var(--bg-alt);
     font-weight: 600;
     font-size: var(--smaller-font-size);
     font-family: var(--sans-serif-fonts);
 }
 
 .ui-button {
+    display: block;
+    padding: 1rem;
     color: var(--accent);
+    stroke: var(--accent);
     text-decoration: none;
     text-transform: uppercase;
+    border: 1.5px solid var(--bg-alt);
+}
+.ui-button svg {stroke: var(--accent);}
+
+.ui-button:hover,
+.ui-button:hover svg {
+    color: var(--accent-alt);
+    stroke: var(--accent-alt);
+    border-color: var(--accent-alt);
 }
 
 .ui-bar {
     padding: 0;
-    clear: both;
+    margin: 1rem;
     width: 100%;
     list-style: none;
     display: flex;
     row-gap: 1rem;
     flex-wrap: wrap;
-    align-items: center;
     justify-content: space-evenly;
 }
 
@@ -277,6 +288,7 @@ header > h2 {
    padding-right: 0.5rem;
    vertical-align: text-bottom
 }
+
 /* Front page */
 #picture { grid-column: span 4; }
 
@@ -427,13 +439,14 @@ header > h2 {
     display: inline;
     height: 1em;
     width: 1em;
-    stroke: var(--accent);
+    stroke: context-stroke;
     stroke-width: 2.5;
     stroke-linecap: round;
     stroke-linejoin: round;
     fill: none;
     margin-bottom: 0;
 }
+
 
 /* Styling for smaller screens */
 @media (max-width: 500px) {
