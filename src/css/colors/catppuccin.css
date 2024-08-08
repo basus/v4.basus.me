@@ -21,11 +21,11 @@
 @media (prefers-color-scheme: dark){
     :root {
         --text: #ccd3f2;         /* Dark color, body text */
-        --text-hdr: #a6adc8;     /* Darker color, headers */
+        --text-hdr: #7686f5;     /* Darker color, headers */
         --text-alt: #1e1e2d;     /* Lightest color, usually white */
         --bg: #252729;           /* 2nd lightest, distinguishable from white */
         --bg-alt: #8187a0;       /* Darker than bg, borders & non-text UI */
-        --accent: #b8bdf3;       /* 2nd brightest, metadata */
+        --accent: #4d9db2;       /* 2nd brightest, metadata */
         --accent-alt: #91acee;   /* Most distinct, links */
     }
 }
