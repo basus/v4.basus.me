@@ -4,7 +4,14 @@ renderOrder: 1
 layout: layouts/default.vto
 ---
 
-{{ import { meta } from "/layouts/stream/meta.vto"}}
+{{ import { meta } from "layouts/stream/meta.vto"}}
+{{ import { icon_button } from "functions.vto" }}
+<ul class="ui-bar">
+  {{ for postType of post_types }}
+  <li>{{ icon_button(postType.name, postType.icon, postType.name) }}</li>
+  {{ /for }}
+</ul>
+
 <ul class="post-list">
 
   {{ for post of search.pages("section=stream basename!=index", "date=desc", 10) }}

@@ -1,2 +1,18 @@
 section: stream
 layout: layouts/stream/post.vto
+post_types:
+  -
+    name: fleet
+    icon: wind
+  -
+    name: link
+    icon: link-2
+  -
+    name: quote
+    icon: message-square
+  -
+    name: video
+    icon: video
+  -
+    name: images
+    icon: image
