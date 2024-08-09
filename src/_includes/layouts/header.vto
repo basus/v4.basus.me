@@ -6,15 +6,16 @@
     <ul id="menu">
 
       {{ for s of sections }}
-      <li class="menu-section {{if s == section }} section-active{{/if}}" >
-        <a href="/{{ s }}" title="{{ title }}">{{ s }}</a>
+      {{ if !s.hidden }}
+      <li class="menu-section {{if s.name == section }} section-active{{/if}}" >
+        <a href="/{{ s.name }}" title="{{ s.title }}">
+          {{ import { icon_label } from  "functions.vto" }}
+          {{ icon_label("/" + s.name, s.icon, s.name) }}
+        </a>
       </li>
+      {{ /if }}
       {{ /for }}
 
-      {{ import { icon_button } from "functions.vto" }}
-      <li class="menu-iconic">
-        {{ icon_button("/feeds/journal.xml", "rss", "RSS") }}
-      </li>
     </ul>
   </nav>
 

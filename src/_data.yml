@@ -1,3 +1,28 @@
 sections:
-  - journal
-  - stream
+  - name: about
+    icon: user
+    hidden: true
+      # - name: uses
+      #   icon: tool
+      # - name: now
+      #   icon: clock
+  - name: journal
+    icon: book
+  - name: stream
+    icon: filter
+  - name: research
+    icon: thermometer
+    hidden: true
+  - name: logs
+    icon: file-text
+    hidden: true
+  - name: feeds
+    icon: rss
+    hidden: true
+  - name: site
+    icon: layout
+    hidden: true
+      # - name: colophon
+      #   icon: code
+      # - name: changelog
+      #   icon: edit

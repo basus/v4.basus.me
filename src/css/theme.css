@@ -161,6 +161,8 @@ header > h2 {
 }
 
 .menu-section a {
+    line-height: 1;
+    background: var(--bg);
     display: inline-block;
     text-align: left;
     letter-spacing: 1px;
@@ -170,9 +172,11 @@ header > h2 {
     font-family: var(--sans-serif-fonts);
 }
 
-.section-active, section-active a {
-    color: var(--text-hdr);
+.section-active, .section-active a,
+.section-active .ui-icon svg{
     font-weight: bold;
+    color: var(--text-hdr);
+    stroke: var(--text-hdr);
     background: linear-gradient(0deg, var(--text-alt), var(--bg));
 }
 
@@ -258,18 +262,25 @@ header > h2 {
     display: block;
     padding: 1rem;
     color: var(--accent);
-    stroke: var(--accent);
     text-decoration: none;
     text-transform: uppercase;
     border: 1.5px solid var(--bg-alt);
 }
-.ui-button svg {stroke: var(--accent);}
 
+.ui-label:hover,
+.ui-label:hover svg,
 .ui-button:hover,
 .ui-button:hover svg {
     color: var(--accent-alt);
     stroke: var(--accent-alt);
     border-color: var(--accent-alt);
+}
+
+.ui-label {
+    display: block;
+    color: var(--accent);
+    text-decoration: none;
+    text-transform: uppercase;
 }
 
 .ui-bar {
@@ -284,10 +295,11 @@ header > h2 {
 }
 
 .ui-icon {
-   line-height: 1;
-   padding-right: 0.5rem;
-   vertical-align: text-bottom
+    line-height: 1;
+    padding-right: 0.5rem;
+    vertical-align: text-bottom
 }
+.ui-icon svg { stroke: var(--accent); }
 
 /* Front page */
 #picture { grid-column: span 4; }
@@ -427,6 +439,10 @@ header > h2 {
 .permalink {
     height: 1em;
     margin-right: 1rem;
+}
+.permalink svg:hover {
+    fill: var(--accent-alt);
+    stroke: var(--accent-alt);
 }
 
 /** Quote posts **/

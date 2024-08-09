@@ -10,11 +10,27 @@
 {{ export function icon_button(uri, icon, title)}}
 
 <a class="ui ui-button" href="{{ uri }}">
-    <span class="ui-icon"> <svg class="feather">
+    <span class="ui-icon">
+        <svg class="feather">
             <title>{{title}}</title>
             <use href="/icons/feather-sprite.svg#{{ icon }}"/>
-    </svg></span>
-    <span>{{ title }}</span>
+        </svg>
+    </span>
+    <span class="ui-text">{{ title }}</span>
+</a>
+
+{{ /export }}
+
+{{ export function icon_label(uri, icon, title)}}
+
+<a class="ui ui-label" href="{{ uri }}">
+    <span class="ui-icon">
+        <svg class="feather">
+            <title>{{title}}</title>
+            <use href="/icons/feather-sprite.svg#{{ icon }}"/>
+        </svg>
+    </span>
+    <span class="ui-text">{{ title }}</span>
 </a>
 
 {{ /export }}
