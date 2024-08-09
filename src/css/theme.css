@@ -497,6 +497,9 @@ header > h3 {
         display: grid;
         grid-template-columns: 1fr 1fr; }
 
+    /*** Generic styles ***/
+    .erase { display: none }
+
     /*** Front page ***/
 
     #picture { grid-column: span 2; }

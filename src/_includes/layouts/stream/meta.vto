@@ -1,11 +1,15 @@
+{{ import { feather } from "functions.vto" }}
 {{ export function meta (post) }}
-    <div class="wide-sidebar">
-
+    <div class="sidebar">
       <a class="metadata" href="{{ post.url }}">
+        {{ feather("link", "Permalink") }}
         <time class="post-date" datetime="{{ post.date |> date('yyyy-mm-dd h:mm')}}">
           {{ post.date |> date('MMM do, yyyy')}}
         </time>
-        at <time class="post-time">{{ post.date |> date(' h:mma') }}</time>
+        <br class="erase"/>
+        at
+        <time class="post-time">{{ post.date |> date(' h:mma') }}</time>
       </a>
     </div>
+
 {{ /export }}
