@@ -14,5 +14,5 @@ post_types:
     name: video
     icon: video
   -
-    name: images
+    name: image
     icon: image

@@ -8,7 +8,8 @@ layout: layouts/default.vto
 {{ import { icon_button } from "functions.vto" }}
 <ul class="ui-bar">
   {{ for postType of post_types }}
-  <li>{{ icon_button(postType.name, postType.icon, postType.name) }}</li>
+  {{ set plural = postType.name + "s" }}
+  <li>{{ icon_button(plural, postType.icon, plural) }}</li>
   {{ /for }}
 </ul>
 

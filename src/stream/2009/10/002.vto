@@ -1,5 +1,5 @@
 ---
-post_type: images
+post_type: image
 date: 2009-10-10T12:12:00-04:00
 images:
   -
@@ -15,5 +15,5 @@ caption: |
          via <a href="http://blog.signalnoise.com/">SignalNoise</a>
 ---
 
-{{ import i from "layouts/stream/functions.vto" }}
-{{ i.images(images, caption, "") }}
+{{ import { image } from "layouts/stream/functions.vto" }}
+{{ image(images, caption, "") }}

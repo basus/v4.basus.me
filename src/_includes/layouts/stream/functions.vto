@@ -12,12 +12,12 @@
 {{ /export }}
 
 
-{{ export function images(images, caption) }}
+{{ export function image(images, caption) }}
 <figure>
 
     <div class="images">
-        {{ for image of images }}
-        <img src="{{ image.src }}" alt="{{ image.alt }}" />
+        {{ for i of images }}
+        <img src="{{ i.src }}" alt="{{ i.alt }}" />
         {{ /for }}
     </div>
 
