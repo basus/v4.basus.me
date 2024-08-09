@@ -18,16 +18,9 @@
 
 
   {{ if cover }}
-  <meta property="og:image" content="{{ image |> url(true) }}"/>
-  <meta property="twitter:image" content="{{ image |> url(true) }}"/>
-  {{ else }}
-  <meta property="og:image" content="{{ "/images/silver-star.png" |> url(true) }}"/>
-  <meta property="twitter:image" content="{{ "/images/silver-star.png" |> url(true) }}"/>
+  <meta property="og:image" content="{{ cover |> url(true) }}"/>
+  <meta property="twitter:image" content="{{ cover |> url(true) }}"/>
   {{ /if }}
-
-
-  <!-- Favicon -->
-  <link rel="icon" href="/images/silver-star.png" type="image/x-icon" />
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="/fonts/fonts.css">
