@@ -6,7 +6,8 @@ layout: layouts/default.vto
 
 {{ import { meta } from "layouts/stream/meta.vto"}}
 {{ import { icon_button } from "functions.vto" }}
-<ul class="ui-bar">
+
+<ul id="post-types" class="ui-bar">
   {{ for postType of post_types }}
   {{ set plural = postType.name + "s" }}
   <li>{{ icon_button(plural, postType.icon, plural) }}</li>

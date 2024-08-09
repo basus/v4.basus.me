@@ -524,6 +524,17 @@ header > h3 {
     #older-pages { grid-column: 2; text-align: right; }
     #latest, #by-tag { grid-column: 1/span 2; }
 
+    /*** Stream posts ***/
+    #post-types { margin: 1rem 0; }
+    #post-types .ui-text { display: none; }
+    #post-types .ui-icon,
+    #post-types .ui-icon svg{
+        display: block;
+        height: 2.5rem;
+        width: 2.5rem;
+        padding: 0;
+    }
+
     footer p {
         max-width: 100%;
         text-align: left;
