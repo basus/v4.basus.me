@@ -17,6 +17,7 @@ function* makeTypePages({ search, paginate }) {
     };
 
     for (const page of paginate(posts, options)) {
+      page.subsection = `${postType}s`;
       yield page;
     }
 
@@ -30,6 +31,7 @@ function* makeTypePages({ search, paginate }) {
         title: `stream / ${postType}`,
         results: search.pages(condition, "date=desc", 10),
         layout: layout,
+        subsection : `${postType}s`,
         pagination : {
           previous : "",
           next: `/stream/${postType}s/2`,
