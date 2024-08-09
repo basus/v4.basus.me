@@ -51,6 +51,7 @@ a {
 a:hover { color: var(--accent-alt); }
 
 article { margin-top: 2rem; }
+article li {margin: 1rem 0;}    /* Only style list elements in the main body text */
 
 blockquote {
     margin: 1em 0;

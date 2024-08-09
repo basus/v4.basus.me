@@ -18,6 +18,7 @@ function* makeTypePages({ search, paginate }) {
 
     for (const page of paginate(posts, options)) {
       page.subsection = `${postType}s`;
+      page.generated = true;
       yield page;
     }
 
@@ -27,6 +28,7 @@ function* makeTypePages({ search, paginate }) {
     if (!indexPage) {
       const condition = `section=stream basename!=index post_type=${postType}`;
       yield {
+        generated: true,
         url: `/stream/${postType}s/index.html`,
         title: `stream / ${postType}`,
         results: search.pages(condition, "date=desc", 10),
@@ -51,6 +53,7 @@ function* makeStreamPages({ search, paginate }) {
   };
 
   for (const page of paginate(posts, options)) {
+      page.generated = true;
     yield page;
   }
 }
