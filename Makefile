@@ -20,6 +20,15 @@ fmt:
 	cd _site; dprint fmt
 
 # targets to add new posts and entries
-#
-fleet:
-	lume new fleet && cat .new-file-path | xargs emacsclient &
+
+# If the first argument is `new` pass the rest of the line to the target
+ifeq (new, $(firstword $(MAKECMDGOALS)))
+  # use the rest as arguments for `new`
+  RUN_ARGS := $(wordlist 2,$(words $(MAKECMDGOALS)),$(MAKECMDGOALS))
+  # Turn them into do-nothing targets, mainly to stop make from complaining
+  $(eval $(RUN_ARGS):;@:)
+endif
+
+new:
+	lume new $(RUN_ARGS) && cat .new-file-path | xargs emacsclient &
+
