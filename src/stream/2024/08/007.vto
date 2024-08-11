@@ -1,0 +1,21 @@
+---
+post_type: fleet
+date: '2024-08-11T20:00:33+0530'
+---
+
+<p>
+
+    After seeing a <a
+    href="https://shkspr.mobi/blog/2023/02/never-use-a-url-shortening-service-even-if-you-own-it/">Mastodon
+    post</a> with embedded links, I fell down the rabbit hole of trying to
+    figure out how to actually post HTML to Mastodon. As far as I can tell,
+    Mastodon will accept HTML posts from other ActivityPub servers, <a
+    href="https://docs.joinmastodon.org/spec/activitypub/#sanitization">sanitize
+    them</a> and display them correctly. But even though the <a
+    href="https://docs.joinmastodon.org/methods/statuses/#create">API
+    examples</a> show statuses with HTML content, actually calling the API that
+    way just creates a plain text post. So if I want to republish <a
+    href="/fleets">fleets</a> with HTML to Mastodon, I'll have to run my own
+    ActivityPub server.
+
+</p>
