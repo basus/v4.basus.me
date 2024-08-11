@@ -8,7 +8,7 @@
 
 @media (prefers-color-scheme: light){
     :root {
-        --text: #6d6f83;         /* Dark color, body text */
+        --text: #5d5d75;         /* Dark color, body text */
         --text-hdr: #4d4f67;     /* Darker color, headers */
         --text-alt: #eff1f5;     /* Lightest color, usually white */
         --bg: #e7e9ee;           /* 2nd lightest, distinguishable from white */
