@@ -1,3 +1,26 @@
+2024-08--11:
+  - Make Catppuccin text color darker
+  - Update text for feeds page
+  - Add better OpenGraph images and favicons
+
+2024-08-09:
+  - Change navigation styling to match UI buttons
+  - Add archetype for link posts and a Makefile runner
+  - Add pagination for individual stream post types, and links and renaming
+    accordingly
+  - Add RSS feeds for entries, posts and individual post types
+  - Tweak OpenGraph images, needs more tweaking for feedbin
+
+2024-08-08:
+  - Tweak dark mode colors
+  - Tweak UI button styling, especially on hover
+  - Change navigation menu styling to match other UI elements
+
+2024-08-07:
+  - Start adding archetypes for posts
+  - Add archetype for fleets
+  - Add Makefile target to automate creating and editing new fleets
+
 2024-08-06:
   - Add Catppuccin color themes (Latte for light and Macchiato for dark)
   - Various style tweaks for quotes, links and code/pre
