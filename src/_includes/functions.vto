@@ -34,3 +34,15 @@
 </a>
 
 {{ /export }}
+
+{{ export function with_icon(icon, text)}}
+
+<span class="icon">
+    <svg class="feather">
+        <title>{{text}}</title>
+        <use href="/icons/feather-sprite.svg#{{ icon }}"/>
+    </svg>
+</span>
+<span class="icon-text">{{ text }}</span>
+
+{{ /export }}

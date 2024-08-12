@@ -2,22 +2,24 @@
 layout: layouts/default.vto
 ---
 <div class="row">
+    <section id="tag-page" class="wide-middlebar">
 
-    <section class="mainbar">
-        <h1>{{ title }}</h1>
-        <p class="meta">{{ entries.length }} entries</p>
-        <ul class="entry-list">
+        {{ import { with_icon } from "functions.vto" }}
 
+        <h2 id="tag-name">{{ with_icon("tag", title) }}</h2>
+        <p id="tag-entry-count" class="metadata">{{ entries.length }} entries</p>
+
+        <ul id="entry-grid" class="entry-list">
             {{ for entry of entries }}
             <li class="entry">
-                <h2 class="entry-title">
+                <h3 class="entry-list-title">
                     <a href="{{ entry.url }}">{{ entry.title }}</a>
-                </h2>
-                <time class="entry-date" datetime="{{ date |> date('yyyy-mm-dd')}}">{{ entry.date |> date('MMM do, yyyy')}}</time>
-                <p class="entry-desc">{{ entry.description }}</p>
+                </h3>
+                <time class="metadata entry-list-date" datetime="{{ date |> date('yyyy-mm-dd')}}">{{ entry.date |> date('MMM do, yyyy')}}</time>
+                <p class="entry-list-desc">{{ entry.description }}</p>
             </li>
             {{ /for }}
-
         </ul>
+
     </section>
 </div>

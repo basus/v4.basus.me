@@ -86,6 +86,7 @@ h1 a, h2 a, h3 a {
 h2 {
     font-size: 2.6rem;
     color: var(--text-hdr);
+    stroke: var(--text-hdr);
 }
 h3 { font-size: var(--larger-font-size); }
 
@@ -303,11 +304,12 @@ header > h3 {
     justify-content: space-evenly;
 }
 
-.ui-icon {
+.ui-icon, .icon {
     line-height: 1;
     padding-right: 0.5rem;
     vertical-align: text-bottom
 }
+.icon svg { stroke: inherit; }
 .ui-icon svg { stroke: var(--accent); }
 
 /* Front page */
@@ -378,6 +380,10 @@ header > h3 {
     position: absolute;
     text-align: right;
 }
+
+/** Individual tag index page **/
+#tag-name { margin-bottom: 0.5rem; }
+#tag-entry-count { margin-bottom: 0.5rem;}
 
 /** Stream index page(s) **/
 
@@ -527,6 +533,7 @@ header > h3 {
     #newer-pages { grid-column: 1}
     #older-pages { grid-column: 2; text-align: right; }
     #latest, #by-tag { grid-column: 1/span 2; }
+    #tag-page { grid-column: 1/-1; }
 
     /*** Stream posts ***/
     #post-types { margin: 1rem 0; }
