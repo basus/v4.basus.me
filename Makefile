@@ -5,9 +5,8 @@ default: deploy
 
 all: build fmt deploy
 
-build: export TZ = "America/New_York"
 build:
-	lume
+	TZ="America/New_York" lume
 
 deploy:
 	rsync -rltcv \
