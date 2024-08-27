@@ -104,18 +104,16 @@ hr.full {
 }
 
 footer {
-    font-family: var(--sans-serif-fonts);
-    text-align: left;
-    text-transform: uppercase;
-    border-top: 2px solid var(--text);
-    padding: 2em;
-    margin-top: auto;
+    padding: 2rem;
+    margin: 2rem auto 2rem auto;
+    width: var(--main-width);
+    border-top: 2px solid var(--bg-alt);
 }
 
 footer p {
-    max-width: 80%;
-    font-size: 1.25rem;
-    margin-left: auto;
+    margin-bottom: 1rem;
+    font-family: var(--serif-fonts);
+    font-size: var(--smaller-font-size);
 }
 
 code, pre {
