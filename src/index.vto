@@ -66,7 +66,7 @@ image: /images/front-page.jpg
 
     <section id="entries">
         <h2>Latest Journal Entries</h2>
-        <ul id="entry-grid" class="entry-list">
+        <ul id="entry-grid" class="entry-list even-split">
             {{ for entry of search.pages("section=journal basename!=index", "date=desc",4) }}
             <li class="entry">
                 <time class="metadata entry-list-date"

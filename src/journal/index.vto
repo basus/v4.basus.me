@@ -42,7 +42,7 @@ layout: layouts/default.vto
 
   <section id="by-tag">
     <h2>Browse by Tag</h2>
-    <ul id="tag-list">
+    <ul id="tag-list" class="even-split">
       {{ for tag of search.values("tags").sort() }}
       <li class="tag metadata">
         <a href="tags/{{ tag |> slugify}}/">{{ tag }}</a>

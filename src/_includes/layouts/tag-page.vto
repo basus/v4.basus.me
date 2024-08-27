@@ -9,7 +9,7 @@ layout: layouts/default.vto
         <h2 id="tag-name">{{ with_icon("tag", title) }}</h2>
         <p id="tag-entry-count" class="metadata">{{ entries.length }} entries</p>
 
-        <ul id="entry-grid" class="entry-list">
+        <ul id="entry-grid" class="entry-list even-split">
             {{ for entry of entries }}
             <li class="entry">
                 <h3 class="entry-list-title">

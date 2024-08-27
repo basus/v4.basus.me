@@ -236,6 +236,15 @@ header > h3 {
 .middlebar { grid-column: 3/-3; }
 .wide-middlebar { grid-column: 2/-2; }
 
+.even-split {
+    padding: 0;
+    display: grid;
+    column-gap: 5%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(min-content, max-content);
+    list-style: none;
+}
+
 .center-left  {
     margin-right: 2rem;
     grid-column: 2/span 5; }
@@ -366,15 +375,6 @@ header > h3 {
 .entry-heading { margin-bottom: 1rem;}
 
 #by-tag { grid-column: 8/-2; }
-
-#tag-list, #entry-grid {
-    padding: 0;
-    display: grid;
-    column-gap: 10%;
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: minmax(min-content, max-content);
-    list-style: none;
-}
 
 #tag-list li {
     padding: 0.5rem 0;
@@ -513,13 +513,7 @@ header > h3 {
 
 #collab-list {
     margin-top: 1.75rem;
-   
-    padding: 0;
-    display: grid;
-    column-gap: 10%;
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: minmax(min-content, max-content);
-    list-style: none;
+
 }
 
 #collab-list li { padding: 0.5rem 0; }
