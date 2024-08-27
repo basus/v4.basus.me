@@ -12,7 +12,6 @@ sections:
     icon: filter
   - name: research
     icon: thermometer
-    hidden: true
   - name: logs
     icon: file-text
     hidden: true
