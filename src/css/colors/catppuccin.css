@@ -8,24 +8,24 @@
 
 @media (prefers-color-scheme: light){
     :root {
-        --text: #5d5d75;         /* Dark color, body text */
-        --text-hdr: #4d4f67;     /* Darker color, headers */
-        --text-alt: #eff1f5;     /* Lightest color, usually white */
         --bg: #e7e9ee;           /* 2nd lightest, distinguishable from white */
-        --bg-alt: #cdd0d9;       /* Darker than bg, borders & non-text UI */
-        --accent: #7686f5;       /* 2nd brightest, metadata */
-        --accent-alt: #3465ec;   /* Most distinct, links */
+        --bg-alt: #eff1f5;       /* Lightest color, usually white */
+        --borders: #adb0b8;      /* Darker than bg, borders & non-text UI */
+        --text: #5d5f75;         /* Dark color, body text */
+        --text-hdr: #4d4f67;     /* Darker color, headers */
+        --metadata: #7686f5;     /* 2nd brightest, metadata */
+        --highlight: #3465ec;    /* Most distinct, links */
     }
 }
 
 @media (prefers-color-scheme: dark){
     :root {
-        --text: #ccd3f2;         /* Dark color, body text */
-        --text-hdr: #7686f5;     /* Darker color, headers */
-        --text-alt: #1e1e2d;     /* Lightest color, usually white */
-        --bg: #252729;           /* 2nd lightest, distinguishable from white */
-        --bg-alt: #8187a0;       /* Darker than bg, borders & non-text UI */
-        --accent: #4d9db2;       /* 2nd brightest, metadata */
-        --accent-alt: #91acee;   /* Most distinct, links */
+        --bg: #252739;           /* 2nd darkest, distinguishable from black */
+        --bg-alt: #1e202f;       /* Lightest color, usually white */
+        --borders: #595b6e;      /* Lighter than bg, borders & non-text UI */
+        --text: #bbc2dc;         /* Dark color, body text */
+        --text-hdr: #cfd6f1;     /* Darker color, headers */
+        --metadata: #b6bef9;     /* 2nd brightest, metadata */
+        --highlight: #92b3f4;    /* Most distinct, links */
     }
 }

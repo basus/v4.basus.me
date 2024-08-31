@@ -42,13 +42,15 @@ p, ul {
     margin: 0 0 1.75rem 0 ; }
 
 a {
-    color: var(--accent-alt);
-    text-decoration: none;
-    text-decoration-color: var(--accent-alt);
-    text-decoration-thickness: 0.1rem;
+    color: var(--highlight);
+    text-decoration: underline;
+    text-decoration-style: dotted;
 }
 
-a:hover { color: var(--accent); }
+a:hover {
+    color: var(--metadata);
+    text-decoration: underline;
+    text-decoration-style: dotted;}
 
 article { margin-top: 2rem; }
 article li {margin: 1rem 0;}    /* Only style list elements in the main body text */
@@ -94,20 +96,20 @@ hr {
   width: 20rem;
   margin: 1em auto;
   border: none;
-  border-top: 1px solid var(--bg-alt);
+  border-top: 2px solid var(--borders);
   display: block;
 }
 
 hr.full {
     width: 100%;
-    border-color: var(--bg-alt);
+    border-color: var(--borders);
 }
 
 footer {
     padding: 2rem;
     margin: 2rem auto 2rem auto;
     width: var(--main-width);
-    border-top: 2px solid var(--bg-alt);
+    border-top: 2px solid var(--borders);
 }
 
 footer p {
@@ -156,7 +158,7 @@ header > h3 {
     align-items: center;
     max-width: 100%;
     position: relative;
-    border-bottom: 2px solid var(--text);
+    border-bottom: 2px solid var(--borders);
 }
 
 .menu-section {
@@ -165,7 +167,7 @@ header > h3 {
     border-style: solid;
     border-width: 0px 2px 0px 0px;
     border-image: linear-gradient(to bottom,  rgba(255,255,255,0),
-                                  var(--text)) 1 100%;
+                                  var(--borders)) 1 100%;
 }
 
 .menu-section a {
@@ -185,7 +187,7 @@ header > h3 {
     font-weight: bold;
     color: var(--text-hdr);
     stroke: var(--text-hdr);
-    background: linear-gradient(0deg, var(--text-alt), var(--bg));
+    background: linear-gradient(0deg, var(--bg-alt), var(--bg));
 }
 
 .menu-iconic {
@@ -200,7 +202,7 @@ header > h3 {
     display: inline;
     height: 1.5em;
     width: 1.5em;
-    stroke: var(--accent);
+    stroke: var(--metadata);
     stroke-width: 3;
     stroke-linecap: round;
     stroke-linejoin: round;
@@ -224,7 +226,7 @@ header > h3 {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-gap: 1rem 1rem;
-    border-bottom: 1.5px solid var(--bg-alt);
+    border-bottom: 2px solid var(--borders);
 }
 
 .sidebar { grid-column: span 2; }
@@ -258,16 +260,16 @@ header > h3 {
 /** Metadata elements **/
 
 .metadata, .metadata a {
-    color: var(--accent);
+    color: var(--metadata);
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 600;
     font-size: var(--smaller-font-size);
     font-family: var(--sans-serif-fonts);
 }
-.metadata a:hover { color: var(--accent-alt); }
+.metadata a:hover { color: var(--highlight); }
 
-.metadata svg {stroke: var(--accent);}
+.metadata svg {stroke: var(--metadata);}
 
 /* Useful for styling a pair of an icon and some text */
 .metadata div { margin-bottom: 0.5rem; }
@@ -281,7 +283,7 @@ header > h3 {
 
 /**  Non-metadata UI elements **/
 .ui {
-    background: var(--text-alt);
+    background: var(--bg-alt);
     font-weight: 600;
     font-size: var(--smaller-font-size);
     font-family: var(--sans-serif-fonts);
@@ -290,24 +292,24 @@ header > h3 {
 .ui-button {
     display: block;
     padding: 1rem;
-    color: var(--accent);
+    color: var(--metadata);
     text-decoration: none;
     text-transform: uppercase;
-    border: 1.5px solid var(--bg-alt);
+    border: 1.5px solid var(--borders);
 }
 
 .ui-label:hover,
 .ui-label:hover svg,
 .ui-button:hover,
 .ui-button:hover svg {
-    color: var(--accent-alt);
-    stroke: var(--accent-alt);
-    border-color: var(--accent-alt);
+    color: var(--highlight);
+    stroke: var(--highlight);
+    border-color: var(--highlight);
 }
 
 .ui-label {
     display: block;
-    color: var(--accent);
+    color: var(--metadata);
     text-decoration: none;
     text-transform: uppercase;
 }
@@ -329,7 +331,7 @@ header > h3 {
     vertical-align: text-bottom
 }
 .icon svg { stroke: inherit; }
-.ui-icon svg { stroke: var(--accent); }
+.ui-icon svg { stroke: var(--metadata); }
 
 /* Front page */
 #picture { grid-column: span 4; }
@@ -361,7 +363,7 @@ header > h3 {
 
 .entry {
     padding: 1rem 0 2rem 0 ;
-    border-bottom: 2px solid var(--bg-alt);
+    border-bottom: 1px solid var(--borders);
 }
 
 .entry-list-date { display: block; }
@@ -376,7 +378,7 @@ header > h3 {
 
 #tag-list li {
     padding: 0.5rem 0;
-    border-bottom: 1.5px solid var(--bg-alt);
+    border-bottom: 1px solid var(--borders);
 }
 
 .tag {
@@ -406,7 +408,7 @@ header > h3 {
 .post {
     padding-top: 3rem;
     padding-bottom: 3rem;
-    border-bottom: 2px solid var(--bg-alt);
+    border-bottom: 1px solid var(--borders);
 }
 
 .post-date, .post-time {
@@ -444,7 +446,7 @@ header > h3 {
 }
 
 .image-caption, .image-caption a, .image-caption a:visited {
-    color: var(--accent);
+    color: var(--metadata);
     text-align: center;
     text-transform: uppercase;
     font-weight: 600;
@@ -466,8 +468,8 @@ header > h3 {
     margin-right: 1rem;
 }
 .permalink svg:hover {
-    fill: var(--accent-alt);
-    stroke: var(--accent-alt);
+    fill: var(--highlight);
+    stroke: var(--highlight);
 }
 
 /** Quote posts **/
@@ -497,7 +499,7 @@ header > h3 {
 
 #projects dt {
     margin-top: 1.75rem;
-    color: var(--accent);
+    color: var(--metadata);
     font-size: var(--para-font-size);
     font-family: var(--serif-fonts);
 }
@@ -517,12 +519,12 @@ header > h3 {
 #collab-list li { padding: 0.5rem 0; }
 
 #collab-list li a {
-    color: var(--accent);
+    color: var(--metadata);
     text-decoration: underline ;
     text-decoration-style: dotted;
     font-family: var(--serif-fonts);
 }
-#collab-list li a:hover { color: var(--accent-alt); }
+#collab-list li a:hover { color: var(--highlight); }
 
 .paper-list {
     padding: 0;
@@ -533,7 +535,7 @@ header > h3 {
 .paper p { margin: 0; }
 
 .paper p.paper-title {
-    color: var(--accent);
+    color: var(--metadata);
     line-height: 1.25;
     margin-bottom: .5rem;
 }
