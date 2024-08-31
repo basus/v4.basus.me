@@ -1,7 +1,21 @@
-2024-08--12:
+2024-08-31:
+  - Added fall color theme, not deployed yet
+  - Made names for colors in themes clearer
+  - Added styling for span elements like book and tv show names
+  - Normalized widths of borders for all elements that have them
+
+2024-08-29:
+  - Updated front page blurb.
+
+2024-08-27:
+  - Add research page from Version 3
+  - Extract styling for even-split 2-column layout into a class
+  - Update favicon and OpenGraph images
+
+2024-08-12:
   - Fix styling for individual tag index pages
 
-2024-08--11:
+2024-08-11:
   - Make Catppuccin text color darker
   - Update text for feeds page
   - Add better OpenGraph images and favicons
