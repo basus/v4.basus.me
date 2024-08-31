@@ -87,6 +87,7 @@ h1 a, h2 a, h3 a {
 
 h2 {
     font-size: 2.6rem;
+    margin: 1rem 0 0.5rem 0;
     color: var(--text-hdr);
     stroke: var(--text-hdr);
 }
@@ -148,6 +149,17 @@ header > h3 {
     text-transform: uppercase;
     font-size: var(--larger-font-size);
 }
+
+/** Styling for semantic elements **/
+span.codename {
+    font-family: var(--mono-fonts);
+    text-transform: uppercase;
+    /* font-family: var(--sans-serif-fonts); */
+    /* font-variant: small-caps; */
+}
+p>span.codename { color: var(--metadata); }
+
+span.book, span.tv { font-style: italic; }
 
 /* Navigation bar styling */
 #menu {
