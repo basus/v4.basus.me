@@ -1,0 +1,31 @@
+/*
+ * The usage pattern derived from Rob Weychert=
+ * https://v6.robweychert.com/blog/2018/02/v6-color/
+ *
+ * The colors themselves are from the Colors Cafe Threads account
+ * https://www.threads.net/@colours.cafe/post/C_NnHW7IczN?xmt=AQGzMAmDO-haykbbMO8GvSRAi3FKBbeMPmGpOgchYTn_0Q
+*/
+
+@media (prefers-color-scheme: light){
+    :root {
+        --text: #39170b;         /* Dark color, body text */
+        --text-hdr: #4e1e43;     /* Darker color, headers */
+        --text-alt: #eff1f5;     /* Lightest color, usually white */
+        --bg: #e3dcc4;           /* 2nd lightest, distinguishable from white */
+        --bg-alt: #994c2e;       /* Darker than bg, borders & non-text UI */
+        --accent: #865527;       /* 2nd brightest, metadata */
+        --accent-alt: #32666a;   /* Most distinct, links */
+    }
+}
+
+@media (prefers-color-scheme: dark){
+    :root {
+        --text: #e3dcc4;         /* Dark color, body text */
+        --text-hdr: #c7813f;     /* Darker color, headers */
+        --text-alt: #302118;     /* Darkest color, usually black */
+        --bg: #39170B;           /* 2nd lightest, distinguishable from white */
+        --bg-alt: #b49b8c;       /* Darker than bg, borders & non-text UI */
+        --accent: #daac66;       /* 2nd brightest, metadata */
+        --accent-alt: #91acee;   /* Most distinct, links */
+    }
+}

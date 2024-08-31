@@ -48,7 +48,7 @@ a {
     text-decoration-thickness: 0.1rem;
 }
 
-a:hover { color: var(--accent-alt); }
+a:hover { color: var(--accent); }
 
 article { margin-top: 2rem; }
 article li {margin: 1rem 0;}    /* Only style list elements in the main body text */
@@ -100,7 +100,7 @@ hr {
 
 hr.full {
     width: 100%;
-    border-color: rgba(0,0,0,0.15);
+    border-color: var(--bg-alt);
 }
 
 footer {
