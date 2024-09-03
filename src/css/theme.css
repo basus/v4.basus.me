@@ -28,6 +28,9 @@ body {
     position: relative;
     height: 100vh;
     background-color: var(--bg);
+
+    /* Sidenote counter */
+    counter-reset: sidenote-counter;
 }
 
 header, main {
@@ -150,12 +153,41 @@ header > h3 {
     font-size: var(--larger-font-size);
 }
 
+/* Styling for sidenotes.
+ *
+ * Caveats: notes must go *before* the reference number in the main text, both
+ * for proper formatting and to keep the counters in sync.
+ * Based on CSS from: https://scripter.co/sidenotes-using-only-css/
+*/
+aside.sidenote {
+    float: left;
+    clear: left;
+    position: relative;
+    width: 14vw;
+    margin-left: -17.5vw;
+    text-align: right;
+    color: var(--text);
+    font-family: var(--sans-serif-fonts);
+    font-size: var(--smaller-font-size);
+}
+aside.sidenote::before {
+    content: counter(sidenote-counter)". " ;
+    counter-increment: sidenote-counter;
+    font-weight: bold;
+    color: var(--metadata);
+}
+span.sidenote-number::after {
+    content: counter(sidenote-counter);
+    vertical-align: super;
+    font-size: 0.7em;
+    font-weight: bold;
+    color: var(--metadata);
+}
+
 /** Styling for semantic elements **/
 span.codename {
     font-family: var(--mono-fonts);
     text-transform: uppercase;
-    /* font-family: var(--sans-serif-fonts); */
-    /* font-variant: small-caps; */
 }
 p>span.codename { color: var(--metadata); }
 

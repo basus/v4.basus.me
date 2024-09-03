@@ -27,18 +27,24 @@ finally go ahead and do it. This is a quick summary of the things I switched to.
 
 ## Terminal emulator: Wezterm
 
+<aside class="sidenote">I think that Rust for the system core and Lua for
+extensibility and scripting will be a killer combination for the future of
+software, espeically when combined with <a
+href="https://fennel-lang.org">Fennel</a>.</aside>
+
 [Wezterm](https://wezfurlong.org/wezterm/) is a modern terminal emulator,
 written in Rust and with a number of interesting features like Lua
 configuration, built-in multiplexing and a flexible keybinding system. Rust is
-definitely (one of) the systems programming language of the future. Built-in
-multiplexing means I don't have to use `tmux` anymore. Since it uses Lua for
-configuration, I can keep my customizations in version control like the rest of
-my configs. Lua configuration also enables very flexible keybindings, which
-means my terminal and Emacs now have the same keybindings for similar actions
-(mostly moving around and splitting windows). To be honest, I didn't actually
-have any problems with iTerm 2 and `tmux`, but it's nice to use one less
-program, and I feel a little more future-proofed. Plus, if I ever go back to
-using a non-Mac computer, I can still use Wezterm.
+definitely (one of) the systems programming language of the future<span
+class="sidenote-number"></span>. Built-in multiplexing means I don't have to
+use `tmux` anymore. Since it uses Lua for configuration, I can keep my
+customizations in version control like the rest of my configs. Lua configuration
+also enables very flexible keybindings, which means my terminal and Emacs now
+have the same keybindings for similar actions (mostly moving around and
+splitting windows). To be honest, I didn't actually have any problems with iTerm
+2 and `tmux`, but it's nice to use one less program, and I feel a little more
+future-proofed. Plus, if I ever go back to using a non-Mac computer, I can still
+use Wezterm.
 
 ## Directory movement: Zoxide
 
