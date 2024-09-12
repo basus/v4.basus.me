@@ -1,5 +1,6 @@
 ---
 date: 2024-09-05T14:15:00+05:30
+published: 2024-09-05T14:15:00+05:30
 title: They Hate Us for Our Links
 description: Social Media Platforms are Bad Web Citizens 
 tags: ["Websites", "IndieWeb"]
