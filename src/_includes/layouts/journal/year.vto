@@ -1,0 +1,22 @@
+---
+layout: layouts/default.vto
+---
+
+<div class="row">
+    <section id="tag-page" class="wide-middlebar">
+        <h2>Journal Entries for {{ year }}</h2>
+        <p id="tag-entry-count" class="metadata">{{ count }} entries</p>
+
+        <ul id="entry-grid" class="entry-list even-split">
+            {{ for entry of results }}
+            <li class="entry">
+                <h3 class="entry-list-title">
+                    <a href="{{ entry.url }}">{{ entry.title }}</a>
+                </h3>
+                <time class="metadata entry-list-date" datetime="{{ entry.date |> date('yyyy-mm-dd')}}">{{ entry.date |> date('MMM do, yyyy')}}</time>
+                <p class="entry-list-desc">{{ entry.description }}</p>
+            </li>
+            {{ /for }}
+        </ul>
+    </section>
+</div>

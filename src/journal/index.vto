@@ -4,7 +4,6 @@ layout: layouts/default.vto
 ---
 
 <div id="archive" class="row">
-
   <section id="intro" class="middlebar">
     <h1>Journal Archive</h1>
     <p>
@@ -27,7 +26,7 @@ layout: layouts/default.vto
   <section id="latest">
     <h2>Latest Entries</h2>
     <ul class="entry-list">
-      {{ for entry of search.pages("section=journal basename!=index", "date=desc",4) }}
+      {{ for entry of search.pages("section=journal basename!=index generated!=true", "date=desc",4) }}
       <li class="entry">
         <time class="metadata entry-list-date" datetime="{{ date |> date('yyyy-mm-dd')}}">{{ entry.date |> date('MMM do, yyyy')}}</time>
         <h3 class="entry-list-title">
@@ -38,6 +37,19 @@ layout: layouts/default.vto
       {{ /for }}
     </ul>
 
+  </section>
+
+  <section id="by-year">
+    <h2>Browse by Year</h2>
+    <ul id="year-list">
+      {{ for page of search.pages("section=journal index=year") }}
+      <li class="year metadata">
+        <a href="/journal/{{page.year}}">{{ page.year }}
+          <span class="year-count">{{ page.count }}</span>
+        </a>
+      </li>
+      {{ /for }}
+    </ul>
   </section>
 
   <section id="by-tag">

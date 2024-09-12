@@ -157,6 +157,7 @@ header > h3 {
  *
  * Caveats: notes must go *before* the reference number in the main text, both
  * for proper formatting and to keep the counters in sync.
+ *
  * Based on CSS from: https://scripter.co/sidenotes-using-only-css/
 */
 aside.sidenote {
@@ -397,7 +398,7 @@ span.book, span.tv { font-style: italic; }
     vertical-align: text-bottom;}
 
 /* Journal Archive page */
-#latest { grid-column: 2/span 5; }
+#latest { grid-column: 1/span 5; }
 
 .entry-list {
     padding: 0;
@@ -418,19 +419,22 @@ span.book, span.tv { font-style: italic; }
 
 .entry-heading { margin-bottom: 1rem;}
 
-#by-tag { grid-column: 8/-2; }
+#by-year { grid-column: 6/span 3; width: 70%; margin: 0 auto 0 auto; }
+#year-list {  list-style: none; padding: 0; }
 
-#tag-list li {
+#by-tag { grid-column: 9/-1; }
+
+#tag-list li, #year-list li {
     padding: 0.5rem 0;
     border-bottom: 1px solid var(--borders);
 }
 
-.tag {
+.tag, .year {
     margin: 0;
     position: relative;
 }
 
-.tag-count {
+.tag-count, .year-count {
     right: 0;
     display: inline;
     position: absolute;
