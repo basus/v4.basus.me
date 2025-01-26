@@ -3,77 +3,70 @@
   {{ include "../head.vto" }}
   <body>
     {{ include "../header.vto" }}
-
-		<main>
+    <main>
       <article class="row journal-entry">
-
         <div class="wide-sidebar">
           <dl class="metadata">
             {{ if started }}
             <div>
-            <dt>
-              <svg class="feather">
-                <title>Started</title>
-                <use href="/icons/feather-sprite.svg#sun"/>
-              </svg>
-            </dt>
-            <dd>{{ started |> date('MMM do, yyyy') }}</dd>
+              <dt>
+                <svg class="feather">
+                  <title>Started</title>
+                  <use href="/icons/feather-sprite.svg#sun"/>
+                </svg>
+              </dt>
+              <dd>{{ started |> date('MMM do, yyyy') }}</dd>
             </div>
             {{ /if }}
 
             {{ if published }}
             <div>
-            <dt>
-              <svg class="feather">
-                <title>Published</title>
-                <use href="/icons/feather-sprite.svg#calendar"/>
-              </svg>
-            </dt>
-            <dd>{{ published |> date('MMM do, yyyy') }}</dd>
+              <dt>
+                <svg class="feather">
+                  <title>Published</title>
+                  <use href="/icons/feather-sprite.svg#calendar"/>
+                </svg>
+              </dt>
+              <dd>{{ published |> date('MMM do, yyyy') }}</dd>
             </div>
             {{ /if }}
 
             {{ if modified }}
             <div>
-            <dt>
-              <svg class="feather">
-                <title>Modified</title>
-                <use href="/icons/feather-sprite.svg#edit"/>
-              </svg>
-            </dt>
-            <dd>{{ published |> date('MMM do, yyyy') }}</dd>
+              <dt>
+                <svg class="feather">
+                  <title>Modified</title>
+                  <use href="/icons/feather-sprite.svg#edit"/>
+                </svg>
+              </dt>
+              <dd>{{ published |> date('MMM do, yyyy') }}</dd>
             </div>
             {{ /if }}
 
             {{ set ts = tags.filter(t => t !== "journal")}}
             {{ if ts && ts.length > 0 }}
             <div>
-            <dt>
-              <svg class="feather">
-                <use href="/icons/feather-sprite.svg#tag"/>
-              </svg>
-            </dt>
-
-            <dd>
-              {{ for idx, tag of ts }}
+              <dt>
+                <svg class="feather">
+                  <use href="/icons/feather-sprite.svg#tag"/>
+                </svg>
+              </dt>
+              <dd>
+                {{ for idx, tag of ts }}
               {{-idx == 0 ? '' : ','}}
               {{tag-}}
               {{ /for }}
-            </dd>
+              </dd>
             </div>
             {{ /if }}
-
           </dl>
         </div>
-
         <div class="mainbar">
           <h1 class="entry-heading">{{ title }}</h1>
           {{ content }}
         </div>
       </article>
     </main>
-
-		{{ include "../footer.vto" }}
+    {{ include "../footer.vto" }}
   </body>
-
 </html>
