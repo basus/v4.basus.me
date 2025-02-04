@@ -194,6 +194,13 @@ p>span.codename { color: var(--metadata); }
 
 span.book, span.tv { font-style: italic; }
 
+span.program {
+    font-family: var(--mono-fonts);
+    font-size: var(--smaller-font-size);
+    background: var(--bg-alt);
+    padding: 0.1em;
+}
+
 /* Navigation bar styling */
 #menu {
     padding: 0;
