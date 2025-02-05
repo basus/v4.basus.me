@@ -672,6 +672,19 @@ span.program {
     /*** Generic styles ***/
     .erase { display: none }
 
+    /*** Sidenotes ***/
+    aside.sidenote {
+        float: none;
+        clear: none;
+        position: relative;
+        width: 50vw;
+        padding: 1em;
+        background: var(--bg-alt);
+        margin: 0 auto 1.75rem auto;
+        border: 1px solid var(--borders);
+        text-align:left;
+    }
+
     /*** Front page ***/
 
     #picture { grid-column: span 2; }
