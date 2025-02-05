@@ -1,0 +1,21 @@
+---
+title: Tags
+layout: layouts/default.vto
+description: None for now
+---
+
+<div class="row">
+  <section class="wide-middlebar">
+    <h2>Browse by Tag</h2>
+    <ul id="tag-card-grid" class="ui-bar">
+      {{ for tag of search.values("tags").sort() }}
+      <li class="tag-card ui">
+        <a class="ui-button" href="{{ tag |> slugify}}/">
+          <span class="tag-card-name"> {{ tag }} </span>
+          <span class="tag-card-count">{{ search.pages(`"${tag}"`).length}}</span>
+        </a>
+      </li>
+      {{ /for }}
+    </ul>
+  </section>
+</div>

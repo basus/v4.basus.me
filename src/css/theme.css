@@ -467,6 +467,24 @@ span.program {
     text-align: right;
 }
 
+/** Tag index page */
+.tag-card {
+    margin: 0.5em;
+    font-size: var(--para-font-size);
+}
+
+.tag-card-name {
+    text-transform: capitalize;
+    font-variant: small-caps;
+}
+
+.tag-card-count {
+    margin-left: 0.25em;
+    font-variant: small-caps;
+    /* Lighten the text color */
+    color: oklch(from currentcolor calc(l * 1.25) c h);
+}
+
 /** Individual tag index page **/
 #tag-name { margin-bottom: 0.5rem; }
 #tag-entry-count { margin-bottom: 0.5rem;}
