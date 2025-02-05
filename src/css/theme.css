@@ -361,7 +361,6 @@ span.program {
 }
 
 .ui-button {
-    display: block;
     padding: 1rem;
     color: var(--metadata);
     text-decoration: none;
@@ -696,10 +695,27 @@ span.program {
         justify-content: space-evenly;
     }
 
-    #newer-pages { grid-column: 1}
-    #older-pages { grid-column: 2; text-align: right; }
-    #latest, #by-tag { grid-column: 1/span 2; order: 2;}
+    #latest, #by-tag, #by-year { grid-column: 1/span 2; order: 2;}
     #tag-page { grid-column: 1/-1; }
+
+    /*** Pagination links ***/
+    .pagination {
+        width:100%;
+        position: relative;
+        padding-top: 1em;
+        margin-bottom: 1.75em;
+    }
+    #newer-pages {
+        display: inline;
+        max-width: fit-content;
+    }
+    #older-pages {
+        right: 0;
+        display: inline;
+        position: absolute;
+        text-align: right;
+        padding: 0;
+    }           /* Override normal style */
 
     /*** Stream posts ***/
     #post-types { margin: 1rem 0; }
