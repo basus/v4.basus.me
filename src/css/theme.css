@@ -262,8 +262,10 @@ span.program {
     margin-bottom: 0;
 }
 
-
-
+.breadcrumb {
+    text-decoration: underline;
+    text-decoration-style: dotted;
+}
 /*** Utility classes for easy grid layouts ***/
 
 .row {
