@@ -1,3 +1,16 @@
+2025-02-05:
+  - Add an index page for tags
+  - Make tags on journal pages link to respective tag page
+  - Make navigation breadcrumbs into links
+  - Fix mobile styling for pagination links and sidenotes
+  - Add some more utility CSS classes
+
+2025-02-04:
+  - Add semantic span for command-line programs
+
+2025-02-02:
+  - Replace Threads link with Bluesky on front page
+
 2024-08-31:
   - Added fall color theme, not deployed yet
   - Made names for colors in themes clearer
