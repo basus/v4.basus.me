@@ -54,7 +54,7 @@
               <dd>
                 {{ for idx, tag of ts }}
               {{-idx == 0 ? '' : ','}}
-              {{tag-}}
+                <a href="/journal/tags/{{tag|>slugify}}">{{tag-}}</a>
               {{ /for }}
               </dd>
             </div>
