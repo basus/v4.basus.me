@@ -290,6 +290,15 @@ span.program {
 .middlebar { grid-column: 3/-3; }
 .wide-middlebar { grid-column: 2/-2; }
 
+.odd-split {
+    padding: 0;
+    display: grid;
+    column-gap: 5%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(min-content, max-content);
+    list-style: none;
+}
+
 .even-split {
     padding: 0;
     display: grid;
@@ -310,6 +319,14 @@ span.program {
     width: 100%;
     clear: both;
 }
+
+.flex {
+    display: flex;
+    row-gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
 
 /** Metadata elements **/
 
