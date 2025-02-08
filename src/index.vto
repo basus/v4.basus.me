@@ -50,17 +50,17 @@ image: /images/front-page.jpg
 
         {{ import { icon_button } from "functions.vto" }}
         <ul id="get-in-touch" class="ui-bar">
-            <li class="ui">
-                {{ icon_button("mailto:shr@basus.me", "mail", "Email") }}
-            </li>
-            <li class="ui">
+            <li class="ui-margin">
                 {{ icon_button("https://github.com/basus/", "github", "GitHub") }}
             </li>
-           <li class="ui">
-                {{ icon_button("https://mastodon.social/@basus/", "activity", "Mastodon") }}
-            </li>
-           <li class="ui">
+            <li class="ui-margin">
                 {{ icon_button("https://bsky.app/profile/basus.me", "cloud-lightning", "Bluesky") }}
+            </li>
+            <li class="ui-margin">
+                {{ icon_button("mailto:shr@basus.me", "mail", "Email") }}
+            </li>
+            <li class="ui-margin">
+                {{ icon_button("https://mastodon.social/@basus/", "activity", "Mastodon") }}
             </li>
         </ul>
 

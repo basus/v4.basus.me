@@ -353,6 +353,10 @@ span.program {
 .metadata dd {display: inline; margin: 0; }
 
 /**  Non-metadata UI elements **/
+.ui-margin {
+    margin: 0.5em;
+}
+
 .ui {
     background: var(--bg-alt);
     font-weight: 600;
@@ -367,11 +371,16 @@ span.program {
     text-transform: uppercase;
     border: 1.5px solid var(--borders);
 }
+.ui-button a {
+    color: var(--metadata);
+    text-decoration: none;
+}
 
 .ui-label:hover,
 .ui-label:hover svg,
 .ui-button:hover,
-.ui-button:hover svg {
+.ui-button:hover svg,
+.ui-button a:hover{
     color: var(--highlight);
     stroke: var(--highlight);
     border-color: var(--highlight);
@@ -467,11 +476,6 @@ span.program {
 }
 
 /** Tag index page */
-.tag-card {
-    margin: 0.5em;
-    font-size: var(--para-font-size);
-}
-
 .tag-card-name {
     text-transform: capitalize;
     font-variant: small-caps;

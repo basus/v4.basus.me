@@ -9,7 +9,7 @@ description: None for now
     <h2>Browse by Tag</h2>
     <ul id="tag-card-grid" class="ui-bar">
       {{ for tag of search.values("tags").sort() }}
-      <li class="tag-card ui">
+      <li class="ui-margin">
         <a class="ui ui-button" href="{{ tag |> slugify}}/">
           <span class="tag-card-name"> {{ tag }} </span>
           <span class="tag-card-count">{{ search.pages(`"${tag}"`).length}}</span>
