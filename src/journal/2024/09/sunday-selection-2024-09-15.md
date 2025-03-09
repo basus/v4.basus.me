@@ -3,7 +3,7 @@ date: 2024-09-15T17:15:00+5:30
 published: 2024-09-15T17:15:00+5:30
 title: Sunday Selection 2024-09-15
 description: Griping about the IndieWeb
-tags: ["IndieWeb", "Websites"]
+tags: ["Sundays", "IndieWeb", "Websites"]
 ---
 
 There's been a bit of drama about the IndieWeb the last few weeks. Small,
