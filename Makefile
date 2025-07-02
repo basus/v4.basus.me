@@ -10,10 +10,11 @@ build:
 
 deploy:
 	rsync -rltcv \
-		--exclude="/fonts" \
+		--chown=basus:www-data \
+		--exclude="fonts" \
 		--exclude="Makefile" \
 		--exclude=".git" \
-	_site/ basus@basus.me:/www/v4
+	_site/ basus.me:v4
 
 fmt:
 	cd _site; dprint fmt
